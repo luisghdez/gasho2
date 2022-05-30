@@ -1,5 +1,12 @@
-<h1>All sports</h1>
+<h1>Home</h1>
 
+<h4>Sport routines</h4>
 <% @sports.each do |s| %>
-<%= link_to s.name, sport_path(s) %>
+<li><%= link_to s.name, sport_path(s) %></li>
 <% end %>
+
+<h4>My routines</h4>
+<% @myroutines.each do |m| %>
+<li><%= link_to m.name, sport_path(m) %></li>
+<% end %>
+<%= link_to 'Create new routine', new_sport_path %>
