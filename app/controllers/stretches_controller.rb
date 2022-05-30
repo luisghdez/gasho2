@@ -1,0 +1,2 @@
+class StretchesController < ApplicationController
+end
