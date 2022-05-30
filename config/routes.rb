@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   resources :sports, only: [:index, :show, :new, :create] do
     resources :routines, only: [:show]
   end
-  resources :stretches, only: [:show]
+  resources :stretches, only: [:show, :create]
 end
