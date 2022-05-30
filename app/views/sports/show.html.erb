@@ -1,0 +1,8 @@
+<h1><%= @sport.name %></h1>
+
+routines for this sport:
+<ul>
+  <% @routines.each do |r| %>
+  <li><%= r.name %> <%= r.description %> <%= link_to 'go', sport_routine_path(r) %></li>
+  <% end %>
+</ul>

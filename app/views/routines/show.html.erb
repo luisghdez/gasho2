@@ -1,0 +1,9 @@
+<h1><%= @routine.name %></h1>
+<%= @routine.description %>
+
+<p>This routine consists of all of these stretches: </p>
+<ul>
+  <% @stretches.each do |s| %>
+    <li><%= s.name %> <%= link_to 'details', stretch_path(s) %></li>
+    <% end %>
+</ul>
