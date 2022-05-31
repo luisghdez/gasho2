@@ -1,12 +1,12 @@
 class SportsController < ApplicationController
   def index
-    @sports = Sport.where(user_id: nil)
-    @myroutines = Sport.where(user_id: current_user.id)
+    @sports = Sport.where(imageable_type: 'Sport')
+    # @myroutines = Sport.where(imageable: current_user.id)
   end
 
   def show
     @sport = Sport.find(params[:id])
-    @routines = Routine.where(sport_id: @sport.id)
+    @routines = Routine.where(imageable_type: 'Sport').where(imageable_id: @sport.id)
   end
 
   def new
@@ -17,7 +17,7 @@ class SportsController < ApplicationController
     @myroutine = Sport.new(sports_params)
     @myroutine.user = current_user
     if @myroutine.save
-      redirect_to sports_path
+      redirect_to root_path
     else
       render :new
     end
