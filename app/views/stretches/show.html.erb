@@ -9,7 +9,7 @@ Ab officiis provident et optio voluptas et exercitationem dolore. Aut nisi eaque
 <p><%= link_to 'Add to my routine' %></p>
 
 <h3>Add this stretch to your routine</h3>
-<%= simple_form_for [@new] do |f| %>
+<%= simple_form_for [@new, @stretch] do |f| %>
   <%= f.collection_select :sport, Sport.where(user_id: current_user), :id, :name %>
   <%= f.submit class: 'btn btn-flat' %>
 <% end %>

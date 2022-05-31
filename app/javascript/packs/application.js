@@ -8,6 +8,12 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel';
+
+import JQuery from 'jquery';
+window.$ = window.JQuery = JQuery;
+
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
