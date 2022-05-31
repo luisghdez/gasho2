@@ -1,0 +1,41 @@
+<div class='container'>
+  <h1>Welcome to Gasho</h1>
+  <p>*search bar goes here*</p>
+  <h3>Special Sport routines</h3>
+  <div class="owl-carousel">
+    <% @sports.each do |s| %>
+      <div class='sport-card card'>
+        <div><%= s.name %></div>
+        <p>Lorem ipsum blablablablab</p>
+      </div>
+    <% end %>
+  </div>
+  <h3>My routines</h3>
+  <div class="owl-carousel">
+    <% @myroutines.each do |s| %>
+      <div class='sport-card card'>
+        <div><%= s.name %></div>
+        <p>Lorem ipsum blablablablab</p>
+      </div>
+    <% end %>
+  </div>
+</div>
+<%= content_for(:after_js) do %>
+  <script>
+    $(document).ready(function(){
+    $('.owl-carousel').owlCarousel({
+        stagePadding: 50,
+        loop: true,
+        margin:10,
+        responsive:{
+          0:{
+            items:1
+          },
+          600:{
+          items:3
+          }
+        }
+      })
+    });
+  </script>
+<% end %>
