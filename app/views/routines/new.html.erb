@@ -1,0 +1,7 @@
+<h1>Create your new routine</h1>
+
+<%= simple_form_for @newroutine do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.submit 'submit' %>
+<% end %>

@@ -7,19 +7,31 @@
       <div class='sport-card card'>
         <div><%= s.name %></div>
         <p>Lorem ipsum blablablablab</p>
+        <%= link_to 'view routines', sport_path(s) %>
       </div>
     <% end %>
   </div>
   <h3>My routines</h3>
-  <div class="owl-carousel">
-    <% @myroutines.each do |s| %>
-      <div class='sport-card card'>
-        <div><%= s.name %></div>
-        <p>Lorem ipsum blablablablab</p>
-      </div>
+  <% if @myroutines %>
+    <div class="owl-carousel">
+      <% @myroutines.each do |s| %>
+        <div class='sport-card card'>
+          <div><%= s.name %></div>
+          <p>Lorem ipsum blablablablab</p>
+          <%= link_to 'view routine', routine_path(s) %>
+        </div>
+      <% end %>
+    </div>
     <% end %>
-  </div>
-</div>
+    </div>
+
+  <%= link_to 'create new routine', new_routine_path %>
+
+
+
+
+
+
 <%= content_for(:after_js) do %>
   <script>
     $(document).ready(function(){
