@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2022_05_31_102715) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "imageable_type"
-    t.integer "imageable_id"
+    t.bigint "imageable_id"
     t.index ["imageable_type", "imageable_id"], name: "index_routines_on_imageable"
   end
 
