@@ -18,6 +18,9 @@ class RoutinesController < ApplicationController
     end
   end
 
+  def update
+    raise
+  end
   private
 
   def routines_params

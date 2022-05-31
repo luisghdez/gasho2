@@ -1,13 +1,7 @@
 class StretchesController < ApplicationController
   def show
-    @myroutines = Sport.where(user_id: current_user)
     @stretch = Stretch.find(params[:id])
-    @new = Stretch.new
-  end
-
-  def create
-    @sport = Sport.find(params[:stretch][:sport])
-
+    @routine = Routine.new
   end
 
   # private
