@@ -5,14 +5,18 @@
   background: var(--bs-primary);
   color: #fdf6ec;
   border-width: 0px;
+  align-items: center;
+  text-align: center;
 }
-.btn-primary :hover{
+.btn-primary:hover{
   border-radius: 15px;
   --bs-primary: #4B7396;
   --bs-primary-rgb: 218,184,139;
   background: var(--bs-primary);
   color: #fdf6ec;
   border-width: 0px;
+  align-items: center;
+  text-align: center;
 }
 
 .btn-secondary {
@@ -22,4 +26,6 @@
   background: var(--bs-primary);
   color: #fdf6ec;
   border-width: 0px;
+  align-items: center;
+  text-align: center;
 }
