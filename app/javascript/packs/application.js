@@ -7,13 +7,17 @@ import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
+import { Application } from '@hotwired/stimulus'
+import ContentLoader from 'stimulus-content-loader'
+
+const application = Application.start()
+application.register('content-loader', ContentLoader);
 
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel';
 
-import JQuery from 'jquery';
-window.$ = window.JQuery = JQuery;
-
+// import JQuery from 'jquery';
+// window.$ = window.JQuery = JQuery;
 
 Rails.start()
 Turbolinks.start()
