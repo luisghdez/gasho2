@@ -12,7 +12,7 @@ class RoutinesController < ApplicationController
     @newroutine = Routine.new(routines_params)
     @newroutine.imageable = current_user
     if @newroutine.save
-      redirect_to root_path
+      redirect_to home_path
     else
       render :new
     end

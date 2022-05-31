@@ -1,29 +1,31 @@
 <div class='container'>
-  <h1>Welcome to Gasho</h1>
-  <p>*search bar goes here*</p>
+  <div class='header'>
+    <h1>Welcome to Gasho</h1>
+    <p>*search bar goes here*</p>
+  </div>
   <h3>Special Sport routines</h3>
   <div class="owl-carousel">
     <% @sports.each do |s| %>
-      <div class='sport-card card'>
-        <div><%= s.name %></div>
-        <p>Lorem ipsum blablablablab</p>
-        <%= link_to 'view routines', sport_path(s), class:'btn btn-primary' %>
-      </div>
+      <%= link_to sport_path(s) do %>
+        <div class='sport-card card p-5'>
+          <div class='text-center'><%= s.name %></div>
+        </div>
+      <% end %>
     <% end %>
   </div>
-  <h3>My routines</h3>
+  <h3>My routines <%= link_to '+', new_routine_path, class:'btn btn-primary rounded-circle' %></h3>
   <% if @myroutines %>
     <div class="owl-carousel">
       <% @myroutines.each do |s| %>
-        <div class='sport-card card'>
-          <div><%= s.name %></div>
-          <p>Lorem ipsum blablablablab</p>
-          <%= link_to 'view routine', routine_path(s), class:'btn btn-primary' %>
-        </div>
+        <%= link_to routine_path(s) do %>
+          <div class='sport-card card p-5'>
+            <div class='text-center'><%= s.name %></div>
+          </div>
+        <% end %>
+      <% end %>
       <% end %>
     </div>
-    <% end %>
-    <%= link_to 'create new routine', new_routine_path, class:'btn btn-primary' %>
+    <%= link_to 'yoga centers near me','#', class:'btn btn-primary' %>
 </div>
 
 
