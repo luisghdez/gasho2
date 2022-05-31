@@ -7,7 +7,7 @@
       <div class='sport-card card'>
         <div><%= s.name %></div>
         <p>Lorem ipsum blablablablab</p>
-        <%= link_to 'view routines', sport_path(s), class:'btn btn-primary' %>
+        <%= link_to 'VIEW ROUTINES', sport_path(s), class:'btn btn-primary' %>
       </div>
     <% end %>
   </div>
@@ -18,12 +18,12 @@
         <div class='sport-card card'>
           <div><%= s.name %></div>
           <p>Lorem ipsum blablablablab</p>
-          <%= link_to 'view routine', routine_path(s), class:'btn btn-primary' %>
+          <%= link_to 'VIEW ROUTINE', routine_path(s), class:'btn btn-primary' %>
         </div>
       <% end %>
     </div>
     <% end %>
-    <%= link_to 'create new routine', new_routine_path, class:'btn btn-primary' %>
+    <%= link_to 'CREATE NEW ROUTINE', new_routine_path, class:'btn btn-primary' %>
 </div>
 
 
