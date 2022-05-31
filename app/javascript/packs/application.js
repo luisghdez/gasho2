@@ -14,6 +14,9 @@ import 'owl.carousel';
 import JQuery from 'jquery';
 window.$ = window.JQuery = JQuery;
 
+
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+import 'bootstrap';
