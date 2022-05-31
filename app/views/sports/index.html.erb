@@ -5,8 +5,10 @@
 <li><%= link_to s.name, sport_path(s) %></li>
 <% end %>
 
+
 <h4>My routines</h4>
 <% @myroutines.each do |m| %>
 <li><%= link_to m.name, sport_path(m) %></li>
 <% end %>
 <%= link_to 'Create new routine', new_sport_path %>
+
