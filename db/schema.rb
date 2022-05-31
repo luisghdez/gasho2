@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 2022_05_30_144049) do
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "user_id"
+    t.bigint "user_id"
     t.index ["user_id"], name: "index_sports_on_user_id"
   end
 
