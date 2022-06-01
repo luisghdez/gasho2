@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_30_144049) do
+ActiveRecord::Schema.define(version: 2022_05_31_102715) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,18 +19,17 @@ ActiveRecord::Schema.define(version: 2022_05_30_144049) do
     t.string "name"
     t.integer "duration"
     t.string "description"
-    t.bigint "sport_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["sport_id"], name: "index_routines_on_sport_id"
+    t.string "imageable_type"
+    t.bigint "imageable_id"
+    t.index ["imageable_type", "imageable_id"], name: "index_routines_on_imageable"
   end
 
   create_table "sports", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "user_id"
-    t.index ["user_id"], name: "index_sports_on_user_id"
   end
 
   create_table "stretches", force: :cascade do |t|
@@ -54,6 +53,5 @@ ActiveRecord::Schema.define(version: 2022_05_30_144049) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "routines", "sports"
   add_foreign_key "stretches", "routines"
 end

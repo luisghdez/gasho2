@@ -1,5 +1,5 @@
 class RemoveUserFromSports < ActiveRecord::Migration[6.1]
   def change
-    remove_column :sports, :user_id
+    remove_reference :sports, :user, null: false, foreign_key: true
   end
 end

@@ -1,6 +1,53 @@
-<main>
-  <a href="#" class="logo">
-    <div class="text-animation" id="logo">Welcome to Gasho</div>
-    <p class="subtitle">Learn how to stretch!</p>
-  </a>
-</main>
+<div class='container'>
+  <h1>Welcome to Gasho</h1>
+  <p>*search bar goes here*</p>
+  <h3>Special Sport routines</h3>
+  <div class="owl-carousel">
+    <% @sports.each do |s| %>
+      <div class='sport-card card'>
+        <div><%= s.name %></div>
+        <p>Lorem ipsum blablablablab</p>
+        <%= link_to 'view routines', sport_path(s) %>
+      </div>
+    <% end %>
+  </div>
+  <h3>My routines</h3>
+  <% if @myroutines %>
+    <div class="owl-carousel">
+      <% @myroutines.each do |s| %>
+        <div class='sport-card card'>
+          <div><%= s.name %></div>
+          <p>Lorem ipsum blablablablab</p>
+          <%= link_to 'view routine', routine_path(s) %>
+        </div>
+      <% end %>
+    </div>
+    <% end %>
+    </div>
+
+  <%= link_to 'create new routine', new_routine_path %>
+
+
+
+
+
+
+<%= content_for(:after_js) do %>
+  <script>
+    $(document).ready(function(){
+    $('.owl-carousel').owlCarousel({
+        stagePadding: 50,
+        loop: true,
+        margin:10,
+        responsive:{
+          0:{
+            items:1
+          },
+          600:{
+          items:3
+          }
+        }
+      })
+    });
+  </script>
+<% end %>

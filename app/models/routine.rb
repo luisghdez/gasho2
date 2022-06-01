@@ -1,3 +1,3 @@
 class Routine < ApplicationRecord
-  belongs_to :sport
+  belongs_to :imageable, polymorphic: true
 end

@@ -97,6 +97,8 @@ GEM
     faker (2.21.0)
       i18n (>= 1.8.11, < 2)
     ffi (1.15.5)
+    font-awesome-sass (5.6.1)
+      sassc (>= 1.11)
     globalid (1.0.0)
       activesupport (>= 5.0)
     i18n (1.10.0)
@@ -240,12 +242,14 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  autoprefixer-rails
   bootsnap (>= 1.4.4)
   bootstrap (~> 5.1, >= 5.1.3)
   byebug
   capybara (>= 3.26)
   devise
   faker
+  font-awesome-sass (~> 5.6.1)
   jbuilder (~> 2.7)
   listen (~> 3.3)
   pg
@@ -267,4 +271,4 @@ RUBY VERSION
    ruby 3.0.3p157
 
 BUNDLED WITH
-   2.3.13
+   2.3.10
