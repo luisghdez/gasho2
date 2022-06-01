@@ -1,16 +1,16 @@
 class StretchesController < ApplicationController
   def show
     @stretch = Stretch.find(params[:id])
-    @routine = Routine.new
+    session[:current_stretch] = @stretch
+    @new = Stretch.new
   end
 
-  # private
+  def create
+    routine = Routine.find(params[:stretch][:routine])
+    stretch = Stretch.find(session[:current_stretch]['id'])
+    stretch.routine = routine
+    stretch.save
 
-  # def stretch_params
-  #   params.require(:stretch).permit(:routine_id)
-  # end
-
-  # def set_stretches
-  #   @stretch = Stretch.find(params[:id])
-  # end
+    redirect_to routine_path(routine)
+  end
 end
