@@ -6,10 +6,12 @@ class StretchesController < ApplicationController
   end
 
   def create
-    routine = Routine.find(params[:stretch][:routine])
+    routine = Routine.find(params[:stretch][:routines])
     stretch = Stretch.find(session[:current_stretch]['id'])
-    stretch.routine = routine
-    stretch.save
+    combo = StretchesRoutine.new
+    combo.routine = routine
+    combo.stretch = stretch
+    combo.save
 
     redirect_to routine_path(routine)
   end
