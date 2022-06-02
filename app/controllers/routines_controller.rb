@@ -1,7 +1,8 @@
 class RoutinesController < ApplicationController
   def show
     @routine = Routine.find(params[:id])
-    @stretches = Stretch.where(routine_id: @routine.id)
+    @stretches = @routine.stretches
+    session[:stretches] = @stretches
   end
 
   def new
@@ -16,6 +17,11 @@ class RoutinesController < ApplicationController
     else
       render :new
     end
+  end
+
+  def routine_start
+    @stretches = session[:stretches]
+    raise
   end
 
   private
