@@ -1,14 +1,16 @@
 <div class='container'>
-  <h1><%= @routine.name %></h1>
-  <%= @routine.description %>
+  <div class='routine-head'>
+    <h1><%= @routine.name %></h1>
+    <%= @routine.description %>
 
-  <p>This routine consists of all of these stretches: </p>
- <div class='row d-flex'>
+    <p>This routine consists of all of these stretches: </p>
+  </div>
+ <div class='row d-flex justify-content-around'>
     <% @stretches.each do |s| %>
-      <%= link_to stretch_path(s) do %>
-        <div class='col-lg-3 col-sm-3 card stretch-card'>
+      <%= link_to stretch_path(s), class: 'col-lg-3 col-sm-6 card stretch-card' do %>
+        <div>
           <%= image_tag("firstyoga.png", class: "card-pic") %>
-          <h3><%= s.name %></h3>
+          <h3 class='text-center'><%= s.name %></h3>
         </div>
       <% end %>
     <% end %>
