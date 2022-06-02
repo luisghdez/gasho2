@@ -1,7 +1,8 @@
 class RoutinesController < ApplicationController
   def show
     @routine = Routine.find(params[:id])
-    @stretches = Stretch.where(routine_id: @routine.id)
+    @stretches = @routine.stretches
+    session[:stretches] = @stretches
   end
 
   def new
@@ -12,10 +13,14 @@ class RoutinesController < ApplicationController
     @newroutine = Routine.new(routines_params)
     @newroutine.imageable = current_user
     if @newroutine.save
-      redirect_to root_path
+      redirect_to home_path
     else
       render :new
     end
+  end
+
+  def routine_start
+    @stretches = session[:stretches]
   end
 
   private

@@ -1,22 +1,18 @@
 class StretchesController < ApplicationController
   def show
-    @myroutines = Sport.where(user_id: current_user)
     @stretch = Stretch.find(params[:id])
+    session[:current_stretch] = @stretch
     @new = Stretch.new
   end
 
   def create
-    @sport = Sport.find(params[:stretch][:sport])
+    routine = Routine.find(params[:stretch][:routines])
+    stretch = Stretch.find(session[:current_stretch]['id'])
+    combo = StretchesRoutine.new
+    combo.routine = routine
+    combo.stretch = stretch
+    combo.save
 
+    redirect_to routine_path(routine)
   end
-
-  # private
-
-  # def stretch_params
-  #   params.require(:stretch).permit(:routine_id)
-  # end
-
-  # def set_stretches
-  #   @stretch = Stretch.find(params[:id])
-  # end
 end
