@@ -1,7 +1,7 @@
 class RoutinesController < ApplicationController
   def show
     @routine = Routine.find(params[:id])
-    @stretches = Stretch.where(routine_id: @routine.id)
+    @stretches = @routine.stretches
   end
 
   def new
