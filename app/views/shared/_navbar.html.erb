@@ -1,22 +1,30 @@
-<nav class="navbar navbar-light navbar-expand-md py-3 <%= 'landnav' if current_page?(:controller => 'pages', :action => 'landing') %>">
-  <div class="container-nav">
+<nav class="navbar navbar-light navbar-expand-md py-3 <%= 'landnav' if current_page?(root_path) %>">
+  <div class="container-fluid nav-2">
     <a class="navbar-brand d-flex align-items-center" href="/home">
       <span class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon">
         <i class="fas fa-praying-hands"></i>
       </span>
       <span class="d-flex align-items-center">gasho.</span>
     </a>
-    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-1">
+      <span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon">
+      </span>
+    </button>
       <div id="navcol-1" class="collapse navbar-collapse">
         <ul class="navbar-nav me-auto">
           <li class="nav-item"><a class="nav-link active" href="/sports">sports</a></li>
           <li class="nav-item"><a class="nav-link" href="/routines">routines</a></li>
           <li class="nav-item"><a class="nav-link" href="/stretches">stretches</a></li>
+          <% if user_signed_in? %>
+            <%= link_to "sign out", destroy_user_session_path, method: :delete, class: "nav-item" %>
+          <% else %>
+          </ul>
+          <ul class="navbar-nav" id= "log-sign">
+            <li class="nav-item nav-link"><%= link_to "sign up", new_user_registration_path %></li>
+            <li class="nav-item nav-link"><%= link_to "log in", new_user_session_path %></li>
+          </ul>
         </ul>
-        <ul class="navbar-nav me-auto" id="second-part">
-          <li class="nav-item"><a class="nav-link active" href="#">sign up</a></li>
-          <li class="nav-item"><a class="nav-link active" href="#">log in</a></li>
-        </ul>
+        <% end %>
       </div>
   </div>
 </nav>
