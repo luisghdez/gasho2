@@ -1,7 +1,33 @@
-.navbar {
+.landnav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   background : transparent;
   font-family: 'Zen Kurenaido', sans-serif;
   position : fixed;
   min-width: 1vw;
+  color: #FDF6EC !important;
+}
+
+.navbar {
+  background : transparent;
+  font-family: 'Zen Kurenaido', sans-serif;
+  min-width: 1vw;
   color: #FDF6EC;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+}
+
+.container-nav {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 100vw;
+}
+
+#second-part{
+  justify-content: end;
 }

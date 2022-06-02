@@ -1,9 +1,9 @@
 .bg-img {
-  background-image: url("https://www.asana-yoga.es/file/2015/03/slider-home-03.jpg");
-  min-height: 380px;
+  background-image: url("https://www.10wallpaper.com/wallpaper/1920x1080/1606/Yoga_silhouette_beautiful_waterside-2016_Sport_HD_Wallpaper_1920x1080.jpg");
+  min-height: 100vh;
   background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-size: auto;
+  background-attachment: fixed;
   position: relative;
   z-index: -1;
 }
@@ -48,4 +48,25 @@
   size: 100%;
   letter-spacing: -0.1rem;
   font-size: 15vw;
+}
+
+.search-input {
+  background-color: transparent;
+  border: none;
+  color: #FDF6EC;
+}
+
+.land-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.landnav a{
+  color: #FDF6EC;
+}
+
+.landnav li{
+  color: #FDF6EC;
 }
