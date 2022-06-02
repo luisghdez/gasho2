@@ -21,7 +21,6 @@ class RoutinesController < ApplicationController
 
   def routine_start
     @stretches = session[:stretches]
-    raise
   end
 
   private

@@ -10,7 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_31_102715) do
+ActiveRecord::Schema.define(version: 2022_06_02_143946) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,10 +36,19 @@ ActiveRecord::Schema.define(version: 2022_05_31_102715) do
   create_table "stretches", force: :cascade do |t|
     t.string "name"
     t.string "description"
-    t.bigint "routine_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["routine_id"], name: "index_stretches_on_routine_id"
+  end
+
+  create_table "stretches_routines", force: :cascade do |t|
+    t.bigint "routine_id", null: false
+    t.bigint "stretch_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "difficulty"
+    t.index ["routine_id"], name: "index_stretches_routines_on_routine_id"
+    t.index ["stretch_id"], name: "index_stretches_routines_on_stretch_id"
+
   end
 
   create_table "users", force: :cascade do |t|
@@ -53,5 +63,6 @@ ActiveRecord::Schema.define(version: 2022_05_31_102715) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "stretches", "routines"
+  add_foreign_key "stretches_routines", "routines"
+  add_foreign_key "stretches_routines", "stretches"
 end

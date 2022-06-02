@@ -1,15 +1,18 @@
-<h1><%= @stretch.name %></h1>
+<div class='d-flex space-between'>
+  <%= image_tag('firstyoga.png', class:'card-pic') %>
+  <div class='card float'>
+    <h1><%= @stretch.name %></h1>
 
-<p><%= @stretch.description %> Lorem ipsum dolor sit amet. Ut labore Quis aut eaque illo sed laborum commodi aut eveniet praesentium sit neque rerum eum minima molestias. Cum rerum quae et minus ducimus est unde soluta est quod quae et officia fugit est laboriosam omnis eum optio repudiandae. Sed mollitia voluptas sed dicta velit est mollitia omnis sit sapiente minus.
+    <p><%= @stretch.description %> Lorem ipsum dolor sit amet. Ut labore Quis aut eaque illo sed laborum commodi aut eveniet praesentium sit neque rerum eum minima molestias. Cum rerum quae et minus ducimus est unde soluta est quod quae et officia fugit est laboriosam omnis eum optio repudiandae. Sed mollitia voluptas sed dicta velit est mollitia omnis sit sapiente minus.
 
-Qui minus qui debitis deserunt est doloribus necessitatibus. Et pariatur omnis et tenetur eveniet aut nisi similique ut amet quis sed excepturi voluptatibus qui voluptas dicta. Id error eligendi qui rerum quaerat eos voluptatem temporibus. Quo earum incidunt aut esse quod eos obcaecati consectetur non nemo incidunt qui veritatis architecto.
+    Qui minus qui debitis deserunt est doloribus necessitatibus. Et pariatur omnis et tenetur eveniet aut nisi similique ut amet quis sed excepturi voluptatibus qui voluptas dicta. Id error eligendi qui rerum quaerat eos voluptatem temporibus. Quo earum incidunt aut esse quod eos obcaecati consectetur non nemo incidunt qui veritatis architecto.
 
-Ab officiis provident et optio voluptas et exercitationem dolore. Aut nisi eaque id quas nobis eum eius nostrum. Ab eius dolorum aut sunt recusandae et dolore voluptatum ea delectus autem.</p>
+    Ab officiis provident et optio voluptas et exercitationem dolore. Aut nisi eaque id quas nobis eum eius nostrum. Ab eius dolorum aut sunt recusandae et dolore voluptatum ea delectus autem.</p>
 
-<% if @stretch.id != current_user.id %>
-  <h3>Add this stretch to your routine</h3>
-  <%= simple_form_for @new do |f| %>
-    <%= f.collection_select :routine, Routine.where(imageable_type: 'User').where(imageable_id: current_user.id), :id, :name %>
-    <%= f.button :submit, '+', class: 'btn btn-primary' %>
-  <% end %>
-<% end %>
+      <h3>Add this stretch to your routine</h3>
+      <%= simple_form_for @new do |f| %>
+        <%= f.collection_select :routines, Routine.where(imageable_type: 'User').where(imageable_id: current_user.id), :id, :name %>
+        <%= f.button :submit, '+', class: 'btn btn-primary' %>
+      <% end %>
+  </div>
+</div>
