@@ -7,7 +7,7 @@
   %>
   <%= submit_tag "Search", class: "btn btn-primary" %>
 <% end %>
-  <h1>All stretch</h1>
+  <h1>all stretches</h1>
   <div class='row d-flex justify-content-around'>
       <% @stretches.each do |s| %>
         <%= link_to stretch_path(s), class: 'col-lg-3 col-sm-6 card stretch-card' do %>

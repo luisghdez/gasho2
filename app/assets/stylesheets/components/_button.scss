@@ -1,5 +1,5 @@
 .btn-primary {
-  border-radius: 15px;
+  border-radius: 8px;
   --bs-primary: #dab88b;
   --bs-primary-rgb: 218,184,139;
   background: var(--bs-primary);
@@ -9,7 +9,7 @@
   text-align: center;
 }
 .btn-primary:hover{
-  border-radius: 15px;
+  border-radius: 8px;
   --bs-primary: #4B7396;
   --bs-primary-rgb: 218,184,139;
   background: var(--bs-primary);
@@ -20,7 +20,7 @@
 }
 
 .btn-secondary {
-  border-radius: 15px;
+  border-radius: 8px;
   --bs-primary: #4B7396;
   --bs-primary-rgb: 218,184,139;
   background: var(--bs-primary);
