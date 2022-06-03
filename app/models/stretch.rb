@@ -1,4 +1,4 @@
 class Stretch < ApplicationRecord
-  belongs_to :routine
-  has_one :sport, through: :routine
+  has_many :stretches_routines
+  has_many :routines, through: :stretches_routines
 end
