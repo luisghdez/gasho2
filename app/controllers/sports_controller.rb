@@ -1,7 +1,7 @@
 class SportsController < ApplicationController
   def index
     @sports = Sport.where(imageable_type: 'Sport')
-    # @myroutines = Sport.where(imageable: current_user.id)
+    @myroutines = Sport.where(imageable: current_user.id)
   end
 
   def show

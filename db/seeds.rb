@@ -328,3 +328,5 @@ stretch = Stretch.new(name: "Supported shoulder stand", description: "From a sup
 stretch.save
 stretch = Stretch.new(name: "Supine angle", description: "Begin in a Plow with your hands supporting your hips. With your hips still high, curl your toes under and begin to tip toe your feet apart wider. If you feel strong enough, release your hands from your hips and reach for your toes.", difficulty: "Intermediate", photo:"https://pocketyoga.com/assets/images/full/supine_angle.png")
 stretch.save
+
+puts "seeds created #{Stretch.count}"
