@@ -1,0 +1,13 @@
+<div class='container'>
+  <h1>All stretch</h1>
+  <div class='row d-flex justify-content-around'>
+      <% @stretches.each do |s| %>
+        <%= link_to stretch_path(s), class: 'col-lg-3 col-sm-6 card stretch-card' do %>
+          <div>
+            <%= image_tag("firstyoga.png", class: "card-pic") %>
+            <h4 class='text-center'><%= s.name %></h4>
+          </div>
+        <% end %>
+      <% end %>
+  </div>
+</div>
