@@ -12,7 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2022_06_02_143946) do
 
-
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -38,6 +37,7 @@ ActiveRecord::Schema.define(version: 2022_06_02_143946) do
     t.string "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "difficulty"
   end
 
   create_table "stretches_routines", force: :cascade do |t|
@@ -45,10 +45,8 @@ ActiveRecord::Schema.define(version: 2022_06_02_143946) do
     t.bigint "stretch_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "difficulty"
     t.index ["routine_id"], name: "index_stretches_routines_on_routine_id"
     t.index ["stretch_id"], name: "index_stretches_routines_on_stretch_id"
-
   end
 
   create_table "users", force: :cascade do |t|
