@@ -1,4 +1,8 @@
 class StretchesController < ApplicationController
+  def index
+    @stretches = Stretch.all
+  end
+
   def show
     @stretch = Stretch.find(params[:id])
     session[:current_stretch] = @stretch

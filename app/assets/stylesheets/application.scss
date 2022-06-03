@@ -20,8 +20,15 @@
 @import "pages/routinestart";
 
 body {
-  background-color: #FDF6EC;
-  // background-image: url('https://cdn.wallpapersafari.com/89/0/FMUKS8.jpg');
+  // background-color: #FDF6EC;
+  background-image: url('https://wallpaperaccess.com/full/1732280.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+h1 {
+  color: #FDF6EC;
 }
 
 // .container {
