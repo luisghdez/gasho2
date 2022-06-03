@@ -9,8 +9,8 @@
     <p><%= @stretch.description %></p>
 
       <h3>Add this stretch to your routine</h3>
-      <%= simple_form_for @new do |f| %>
-        <%= f.collection_select :routines, Routine.where(imageable_type: 'User').where(imageable_id: current_user.id), :id, :name %>
+      <%= simple_form_for [@stretch, @new] do |f| %>
+        <%= f.collection_select :routine, Routine.where(imageable_type: 'User').where(imageable_id: current_user.id), :id, :name %>
         <%= f.button :submit, '+', class: 'btn btn-primary' %>
       <% end %>
   </div>

@@ -1,12 +1,10 @@
 
 <div class='container'>
-  <h1><%= @sport.name %></h1>
-
-  routines for this sport:
+  <h1 class='text-center'><%= @sport.name %></h1>
   <div class='d-flex justify-content-around'>
     <% @routines.each do |r| %>
       <div class='card routine-card'>
-        <h3><%= r.name %></h3> <p><%= r.description %></p> <%= link_to 'go', routine_path(r) %>
+        <h3><%= r.name %></h3> <p><%= r.description %></p> <%= link_to 'view', routine_path(r), class: 'btn routbtn' %>
       </div>
     <% end %>
   </div>

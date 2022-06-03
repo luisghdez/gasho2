@@ -8,7 +8,8 @@ Rails.application.routes.draw do
   resources :routines, only: [:new, :create, :show] do
     get 'routinestart', to: 'routines#routine_start'
   end
-  resources :stretches, only: [:index, :show, :create] do
+  resources :stretches, only: [:index, :show] do
     resources :routines, only: :update
+    resources :stretches_routines, only: :create
   end
 end
