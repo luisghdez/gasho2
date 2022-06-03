@@ -1,6 +1,14 @@
 class StretchesController < ApplicationController
   def index
-    @stretches = Stretch.all
+    if params[:query].present?
+      sql_query = " \
+        stretches.name @@ :query \
+        OR stretches.difficulty @@ :query \
+      "
+      @stretches = Stretch.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @stretches = Stretch.all
+    end
   end
 
   def show
