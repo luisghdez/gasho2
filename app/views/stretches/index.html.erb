@@ -1,10 +1,18 @@
 <div class='container'>
+<%= form_tag stretches_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a stretch"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
   <h1>All stretch</h1>
   <div class='row d-flex justify-content-around'>
       <% @stretches.each do |s| %>
         <%= link_to stretch_path(s), class: 'col-lg-3 col-sm-6 card stretch-card' do %>
           <div>
-            <%= image_tag("firstyoga.png", class: "card-pic") %>
+            <%= image_tag("#{s.photo}", class: "card-pic") %>
             <h4 class='text-center'><%= s.name %></h4>
           </div>
         <% end %>
