@@ -12,6 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2022_06_03_120959) do
 
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -47,7 +48,8 @@ ActiveRecord::Schema.define(version: 2022_06_03_120959) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "difficulty"
-  end
+    t.string "photo"
+
 
   create_table "stretches_routines", force: :cascade do |t|
     t.bigint "routine_id", null: false
