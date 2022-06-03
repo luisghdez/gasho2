@@ -6,54 +6,53 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-stretch = Stretch.new(name: "Big toe", description: "Begin by standing with your feet hip width apart. Hinge forward from your hips with a long, flat back and fold your torso over your thighs. Try to connect your chest to your thighs by hollowing out your lower belly. Send your sit bones high, draw your knee caps up and relax your hamstrings. Slide your index and middle fingers of each hand between the big toes and the second toes. Then curl those fingers under and grip the big toes firmly, wrapping your thumbs around the other two fingers to secure the wrap. Press your toes down against your fingers.", difficulty: "Intermediate", photo:"https://pocketyoga.com/assets/images/thumbnails146/forward_bend_big_toe-tn146.png")
-stretch.save
-stretch = Stretch.new(name: "Bird of paradise", description: "From Bound Revolved Chair, one foot stays rooted into the earth and straightens while the opposite leg comes up with a bent knee. Once you are standing upright extend the leg toward the sky. The ribcage is lifted and the heart is open in the full expression of the pose. The gaze is forward.", difficulty: "Advanced", photo:"https://pocketyoga.com/assets/images/thumbnails146/chair_twist_bind_up_R-tn146.png")
-stretch.save
-stretch = Stretch.new(name: "Revolved Bird of paradise", description: "From Revolved Chair pose, the lower arm reaches back around the legs as the upper arm wraps around the back and the fingers of the respective hands eventually meet and interlace. One foot stays rooted into the earth and straightens while the opposite leg comes up with a bent knee. Once you are standing upright extend the leg toward the sky. The ribcage is lifted and the heart is open in the full expression of the pose. The gaze is forward.", difficulty: "Advanced", photo:"https://pocketyoga.com/assets/images/thumbnails146/bird_of_paradise_revolved_L-tn146.png")
-stretch.save
-stretch = Stretch.new(name: "Chair", description: "From a standing position, the feet are together and rooted into the earth with toes actively lifted. The knees are bent and the weight of the body is on the heels of the feet. The pelvis is tucked in and the ribcage is lifted. The neck is a natural extension of the spine. The arms are lifted up toward the sky with the elbows straight and the biceps by the ears. The hands can be together or separated and facing each other with the fingers spread wide. The gaze is forward.", difficulty: "Beginner", photo:"https://pocketyoga.com/assets/images/thumbnails146/chair-tn146.png")
-stretch.save
-stretch = Stretch.new(name: "Crescent Lunge", description: "The front foot of one leg is rooted on the earth with the knee directly above and tracking the ankle in a 90-degree angle. The back leg is straight, no bend in the knee, and the weight is distributed backwards onto the toes as the back heel pushes back and down toward the earth. The inner thighs scissor toward each other and the pelvis is tucked under with the ribcage lifted and the chin slightly tucked. The spine is long and extended. The heart is open. The arms are straight with no bend in the elbows or the wrists. The hands can be together or separated and facing each other with the fingers spread wide. Gaze is natural and forward.", difficulty: "Intermediate", photo:"https://pocketyoga.com/assets/images/thumbnails146/lunge_crescent_R-tn146.png")
-stretch.save
-stretch = Stretch.new(name: "Crescent Lunge on the knee", description: "The front knee is bent in a 90-degree angle directly above the ankle and the back knee is resting on the earth with the top of the back foot pressed firmly into the earth. The hips are squared and pressed forward. The inner thighs scissor toward each other. The pelvis is tucked under to protect the low back. The ribcage is lifted. The arms are lifted. The hands can be together or separated and facing each other with the fingers spread wide. The gaze is forward.", difficulty: "Beginner", photo:"https://pocketyoga.com/assets/images/thumbnails146/warrior_i_kneeling_R-tn146.png")
-stretch.save
-stretch = Stretch.new(name: "Crescent moon", description: "From Mountain with Arms Up pose, extend upwards toward the sky as you bend to one side, lengthening the opposite side of the rib cage and stretch.", difficulty: "Intermediate", photo:"https://pocketyoga.com/assets/images/thumbnails146/crescent_moon_L-tn146.png")
-stretch.save
-stretch = Stretch.new(name: "Eagle", description: "From a standing position the one thigh is crossed over the other with the toes and/or the ankle hooked behind the lower calf. The weight of the body is balanced on the standing foot. The arms are crossed in front of the torso so that one arm is crossed above the other arm. The top arm is tucked into the elbow crook of the bottom arm. The hands are hooked around each other as well. Once hooked, the elbows lift up and the fingers stretch toward the sky. The gaze is soft and forward.", difficulty: "Intermediate", photo:"https://pocketyoga.com/assets/images/thumbnails146/eagle_L-tn146.png")
-stretch.save
-stretch = Stretch.new(name: "Standing foot behind the head", description: "Begin in Moon Bird. Shift your weight forward to come into a squat position by bending the knee of your extended leg and placing your foot on the ground. Using your core, stand up, keeping the foot behind the head. Option to place your palms on your standing thigh until you find your balance. Stand up tall, lift your chin and bring your hands to meet in prayer.", difficulty: "Advanced", photo:"https://pocketyoga.com/assets/images/thumbnails146/standing_foot_behind_head_L-tn146.png")
-stretch.save
-stretch = Stretch.new(name: "Standing foot to head", description: "Begin in One Legged Mountain and bend your floating knee. Hinge from your hips and scoop up your foot by interlacing your hands underneath the sole of your foot. Keep your interlaced hands underneath the sole of your foot and straighten your leg out in front of you. Lift your chest and using your hands and core, lift your foot towards your head. Stand up tall, keeping your focus. Prevent hyper extension by keeping a soft bend in your knees.", difficulty: "Advanced", photo:"https://pocketyoga.com/assets/images/thumbnails146/trivikrama_i_L-tn146.png")
-stretch.save
-stretch = Stretch.new(name: "Standing foot behind the head forward bend", description: "Begin in Standing Foot Behind the Head and hinge forward coming into a forward bend. Rest your palms on either side of your grounded foot and bring your forehead towards the leg. Extend through the back of your neck to bring your chin to the knee.", difficulty: "Advanced", photo:"https://pocketyoga.com/assets/images/thumbnails146/standing_forward_bend_foot_behind_head_L-tn146.png")
-stretch.save
-stretch = Stretch.new(name: "Standing forward bend", description: "From a standing position, the body is folded over at the crease of the hip with the spine long. The neck is relaxed and the crown of the head is toward the earth. The feet are rooted into the earth with the toes actively lifted. The spine is straight. The ribcage is lifted. The chest and the thighs are connected. The sacrum lifts up toward the sky in dog tilt. The fingertips are resting on the earth next to the toes. The gaze is down or slightly forward.", difficulty: "Beginner", photo:"https://pocketyoga.com/assets/images/thumbnails146/forward_bend-tn146.png")
-stretch.save
-stretch = Stretch.new(name: "Standing half bound lotus forward bend", description: "Begin in Standing Half Bound Lotus. Keeping your bind, extend your free arm high into the sky then hinge from your hips to fold over your grounded leg. Place your hand on the ground and draw your chin toward your chest. Concentrate on bringing your forehead to your shin.", difficulty: "Intermediate", photo:"https://pocketyoga.com/assets/images/thumbnails146/standing_forward_bend_half_lotus_L-tn146.png")
-stretch.save
-stretch = Stretch.new(name: "Goddess", description: "Step your feet to the side to the length of your mat and wide apart. Turn your toes out toward the corners, heels in. Bend your knees directly over your toes and lower your hips into a squat at the same time. Tuck your tailbone in slightly and press your hips forward as you draw your thighs back. Pull your lower belly in and lift through your rib cage. Keep your knees in line with your toes. Soften your shoulders.", difficulty: "Beginner", photo:"https://pocketyoga.com/assets/images/thumbnails146/goddess_R-tn146.png")
-stretch.save
-stretch = Stretch.new(name: "Gorilla", description: "Begin from an upright standing position with the feet parallel (about six inches apart) and the front of the thighs contracted to lift the kneecaps. The body is bent forward from the crease of the hip joints with the legs completely straight and the torso parallel to the earth. The index and middle fingers of each hand are wrapped between the big toes and the second toes. Fingers and thumbs are curled around and under the big toes to firmly secure the wrap. The toes press down against the fingers. To fold deeper into the pose the sitting bones are lifted up toward the sky, the torso is pressed toward the thighs and the crown of the head is lowered toward the earth. Depending on flexibility, the lower back hollows to a greater or lesser degree. At the same time, without compressing the back of the neck, the sternum is lifted. The forehead stays relaxed. For the full extension of the pose the elbows bend out to the sides as the toes are pulled up. This lengthens the front and sides of the torso. For very long hamstrings, draw the forehead toward the shins. For hamstrings that are short, it is better to focus on keeping the front torso long. The gaze is down or toward the body.", difficulty: "Intermediate", photo:"https://pocketyoga.com/assets/images/thumbnails146/gorilla-tn146.png")
-stretch.save
-stretch = Stretch.new(name: "Half moon", description: "From a standing position one leg is straight while the other is extended back parallel to the earth (or a little above parallel) and one hand is on the earth (beyond the little-toe side of the foot, about 12 inches) while the other hand is extended up toward the sky. The shoulder blades are squeezed together and the fingers move outward in opposing directions. The weight of the body is supported mostly by the standing leg while the bottom hand has very little weight on it but is used intelligently to regulate balance. The upper torso is rotated open to the sky. Both hips are externally rotated. Energy is extended actively through the flexed toes to keep the raised leg strong. The inner ankle of the standing foot is lifted strongly upward, as if drawing energy from the earth. The sacrum and scapulae are firmly pressed against the back torso and lengthen the coccyx toward the raised foot. The gaze is either up or down, depending on the condition of the neck. If injured the gaze is down.", difficulty: "Intermediate", photo:"https://pocketyoga.com/assets/images/thumbnails146/half_moon_R-tn146.png")
-stretch.save
-stretch = Stretch.new(name: "Revolved half moon", description: "From Half Moon, slowly bring the top hand down to replace the bottom hand. On the next inhalation, bring the opposite hand to the sky, twist the pelvis to the opposite side and stack the shoulders on top of each other. Gaze is toward the sky and if not possible, gaze is downwards.", difficulty: "Intermediate", photo:"https://pocketyoga.com/assets/images/thumbnails146/half_moon_revolved_R-tn146.png")
-stretch.save
-stretch = Stretch.new(name: "Extended standing hand to big toe", description: "From Mountain pose, lift one foot. Bend forward and catch the toes with the fingers. Place the other hand on the hip to square the hip toward the front. Slowly straighten the knee and the torso and open the leg to one side. Use a strap if necessary. Gaze toward the front or opposite of the extended leg for balance.", difficulty: "Advanced", photo:"https://pocketyoga.com/assets/images/thumbnails146/standing_hand_to_toe_extended_R-tn146.png")
-stretch.save
-stretch = Stretch.new(name: "Revolved standing hand to big toe", description: "Begin standing in Mountain. Shift your weight to one foot, and ground down firmly. Bend your opposite knee up toward your chest using both hands to hug it in. Begin to place your outside hand to the outer edge of your foot. As you straighten your floating leg, twist your torso toward the back and extend your opposite arm. Gaze toward your opposite arm.", difficulty: "Advanced", photo:"https://pocketyoga.com/assets/images/thumbnails146/standing_hand_to_toe_revolved_R-tn146.png")
-stretch.save
-stretch = Stretch.new(name: "Standing hand to big toe", description: "Begin standing in Mountain. Shift your weight to one foot, and ground down firmly. Bend your opposite knee up toward your chest using the same side arm to hug it in. Wrap your index and middle finger around your big toe and begin to straighten your knee out in front of you. Place your opposite hand to your hip and square off your shoulders. You are now in Standing Hand to Big Toe (Preparation). Bend forward, as you pull your extended leg toward you, and bring your chin toward your shin. Gaze is to the front.", difficulty: "Advanced", photo:"https://pocketyoga.com/assets/images/thumbnails146/standing_hand_to_toe_full_R-tn146.png")
-stretch.save
-stretch = Stretch.new(name: "Mountain", description: "The body is in the standing position, with the feet together and rooted into the earth. The weight of the body is evenly distributed on the four corners of the feet. The pelvis is tucked. The ribcage is lifted. The neck is a natural extension of the spine and the chin is slightly tucked toward the sternum. The shoulders are relaxed as they rotate back and down. The arms at your sides. The gaze is forward.", difficulty: "Beginner", photo:"https://pocketyoga.com/assets/images/thumbnails146/mountain_arms_side-tn146.png")
-stretch.save
-stretch = Stretch.new(name: "Pyramid", description: "From Pyramid (Preparation), hinge your torso forward at the crease of your hip joint and fold your chest over your front thigh. Continue squaring your hips forward, gaze is down.", difficulty: "Intermediate", photo:"https://pocketyoga.com/assets/images/thumbnails146/pyramid_prayer_R-tn146.png")
-stretch.save
-stretch = Stretch.new(name: "Shiva squat", description: "Begin in Standing Splits. Lift your chest half way up and hug your top knee behind your standing knee. Bend both knees as much as possible and sit back. Keep your front knee in line with your grounded ankle. Hips stay square and your core is engaged.", difficulty: "Intermediate", photo:"https://pocketyoga.com/assets/images/thumbnails146/shiva_squat_R-tn146.png")
-stretch.save
-stretch = Stretch.new(name: "Extended side angle", description: "From Warrior II, engage your back thigh, anchor your back heel to the ground and maintain a 90 degree bend of your front knee. Keep your heart open and hinge forward towards your bent knee. Place your bottom palm on the inside or outside of your front foot. Extend your top arm up and over your head and bring your bicep by your ear. Take your eye gaze towards your top hand and rotate your chest and ribcage up towards the sky.", difficulty: "Intermediate", photo:"https://pocketyoga.com/assets/images/thumbnails146/warrior_ii_forward_arm_forward_R-tn146.png")
-stretch.save
+Sport.create(name: 'Football')
+Sport.create(name: 'Basketball')
+Sport.create(name: 'Volleyball')
+Sport.create(name: 'Golf')
+Sport.create(name: 'Tennis')
+
+warmup = 'This is the perfect routine to warm up for your selected sport. Do this before you start!'
+post = 'The ideal routine to do directly after exercise. This post-exercice routine will have you feeling like new!'
+recovery = 'This routine is for the day after you did this exercise. Recover from your exercise and feel amazing.'
+
+Sport.all.each do |s|
+  r = Routine.new(name: 'Warm-up')
+  r.description = warmup
+  r.imageable = s
+  r.save
+  10.times do
+    a = StretchesRoutine.new
+    a.routine = Routine.last
+    a.stretch = Stretch.order('RANDOM()').first
+    a.save
+  end
+  r = Routine.new(name: 'Post-stretch')
+  r.description = post
+  r.imageable = s
+  r.save
+  10.times do
+    a = StretchesRoutine.new
+    a.routine = Routine.last
+    a.stretch = Stretch.order('RANDOM()').first
+    a.save
+  end
+  r = Routine.new(name: 'Recovery')
+  r.description = recovery
+  r.imageable = s
+  r.save
+  10.times do
+    a = StretchesRoutine.new
+    a.routine = Routine.last
+    a.stretch = Stretch.order('RANDOM()').first
+    a.save
+  end
+end
+
+puts Sport.count
+puts Routine.count
+puts Stretch.count
+
 stretch = Stretch.new(name: "Standing Splits", description: "From standing forward bend, lift your gaze and find a focal point on the ground in front of you. Walk your fingers out slightly in front of you. Shift your weight to one foot and lift your opposite leg up toward the sky. Focus on keeping your chest connected to the thigh of your grounded leg, even if you need to take a slight bend in your knee. The hip of your lifted leg should be squared, just like your grounded leg. Keep the hip bone of your lifted leg pointed downward and your toes rotated inward toward the midline of your body.", difficulty: "Intermediate", photo:"https://pocketyoga.com/assets/images/thumbnails146/splits_standing_R-tn146.png")
 stretch.save
 stretch = Stretch.new(name: "Standing Bow", description: "Begin from a standing position with the weight of the body on one foot as the opposite heel lifts up toward the buttocks with a bent knee. The hand on the same side of the body as the bent knee reaches back to grasp the outside of the foot or ankle. With the added resistance of the hand gripping the foot, the bent leg and foot is then lifted up away from the earth and the torso toward the back of the room until the thigh is parallel to the earth. Then the arm on the same side of body as the standing leg extends up and forward to the front. The gaze is forward. Avoid compression in the lower back by actively lifting the pubis toward the navel while at the same time, pressing the tailbone toward the floor.", difficulty: "Intermediate", photo:"https://pocketyoga.com/assets/images/thumbnails146/lord_of_the_dance_R-tn146.png")

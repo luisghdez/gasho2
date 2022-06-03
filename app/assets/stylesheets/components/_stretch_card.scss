@@ -2,18 +2,17 @@
   border-radius: 10px;
   background-color: transparent;
   border: none;
-  width: fit-content;
   padding: 10px;
   align-items: center;
+
+  h4 {
+    color: #B7CADB;
+  }
 }
 
 .card-pic {
   width: 180px;
   height: 240px;
-
-  h3 {
-    color: black;
-  }
 }
 
 @media screen and (max-width: 600px) {
@@ -26,11 +25,4 @@
   .routine-head {
     margin-left: 10px;
   }
-}
-
-.container {
-  // background-image: url("https://cdn.wallpapersafari.com/89/0/FMUKS8.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
 }
