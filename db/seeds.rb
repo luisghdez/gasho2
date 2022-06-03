@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+puts "creating seeds"
+
 stretch = Stretch.new(name: "Big toe", description: "Begin by standing with your feet hip width apart. Hinge forward from your hips with a long, flat back and fold your torso over your thighs. Try to connect your chest to your thighs by hollowing out your lower belly. Send your sit bones high, draw your knee caps up and relax your hamstrings. Slide your index and middle fingers of each hand between the big toes and the second toes. Then curl those fingers under and grip the big toes firmly, wrapping your thumbs around the other two fingers to secure the wrap. Press your toes down against your fingers.", difficulty: "Intermediate")
 stretch.save
 stretch = Stretch.new(name: "Bird of paradise", description: "From Bound Revolved Chair, one foot stays rooted into the earth and straightens while the opposite leg comes up with a bent knee. Once you are standing upright extend the leg toward the sky. The ribcage is lifted and the heart is open in the full expression of the pose. The gaze is forward.", difficulty: "Advanced")
@@ -328,3 +330,5 @@ stretch = Stretch.new(name: "Supported shoulder stand", description: "", difficu
 stretch.save
 stretch = Stretch.new(name: "Supine angle", description: "From a supine position, the upper back is resting on the earth with the hips straight up toward the sky. The torso is perpendicular to the earth. The legs are fully extended and the toes are active. The hands are either supporting the lower back or extended up by the side body in matchstick. The weight rests on the center of the back of your skull and the neck maintains its natural curvature. The chest reaches towards the chin and the gaze is inward or towards the toes.", difficulty: "Intermediate")
 stretch.save
+
+puts "seeds created #{Stretch.count}"
