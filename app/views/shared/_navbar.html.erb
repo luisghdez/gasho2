@@ -4,7 +4,6 @@
       <span class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon">
         <i class="fas fa-praying-hands"></i>
       </span>
-      <span class="d-flex align-items-center">gasho.</span>
     </a>
     <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-1">
       <span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon">
@@ -12,14 +11,14 @@
     </button>
       <div id="navcol-1" class="collapse navbar-collapse">
         <ul class="navbar-nav me-auto">
-          <li class="nav-item"><a class="nav-link active" href="/sports">sports</a></li>
-          <li class="nav-item"><a class="nav-link" href="/routines">routines</a></li>
-          <li class="nav-item"><a class="nav-link" href="/stretches">stretches</a></li>
-          <% if user_signed_in? %>
-            <%= link_to "sign out", destroy_user_session_path, method: :delete, class: "nav-item" %>
-          <% else %>
+          <li class="nav-item active"><a class="nav-link active" href="#sports">sports</a></li>
+          <li class="nav-item"><a class="nav-link" href="#routines">routines</a></li>
+          <li class="nav-item"><a class="nav-link" href="#stretches">stretches</a></li>
           </ul>
           <ul class="navbar-nav" id= "log-sign">
+          <% if user_signed_in? %>
+            <li class="nav-item nav-link"><%= link_to "sign out", destroy_user_session_path, method: :delete, class: "nav-item nav-link" %>
+          <% else %>
             <li class="nav-item nav-link"><%= link_to "sign up", new_user_registration_path %></li>
             <li class="nav-item nav-link"><%= link_to "log in", new_user_session_path %></li>
           </ul>

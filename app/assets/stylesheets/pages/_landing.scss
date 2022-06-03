@@ -21,7 +21,7 @@
 
 .topnav a {
   float: left;
-  color: #f2f2f2;
+  color: #fdf6ec;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -39,12 +39,19 @@
   text-align: center;
 }
 
-.centered {
+.centered{
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #FDF6EC;
+  color: #fdf6ec;
+  size: 100%;
+  letter-spacing: -0.1rem;
+  font-size: 5vw;
+}
+
+.centered-title {
+  color: #fdf6ec;
   size: 100%;
   letter-spacing: -0.1rem;
   font-size: 15vw;
@@ -53,7 +60,7 @@
 .search-input {
   background-color: transparent;
   border: none;
-  color: #FDF6EC;
+  color: black;
 }
 
 .land-container {
@@ -64,9 +71,94 @@
 }
 
 .landnav a{
-  color: #FDF6EC;
+  color: #fdf6ec;
 }
 
 .landnav li{
-  color: #FDF6EC;
+  color: #fdf6ec;
+}
+
+section{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section:nth-child(1){
+  color: black;
+  }
+
+section:nth-child(2){
+  color: black;
+  background: transparent;
+}
+
+section:nth-child(3){
+  color: black;
+}
+
+section:nth-child(4){
+  color: black;
+  background: transparent;
+}
+
+section .container{
+  margin: 100px;
+}
+
+section h1{
+  font-size: 3rem;
+  margin: 20px;
+}
+
+section h2{
+  text-align: center;
+  color: #fdf6ec !important;
+  font-size: 8vw !important;
+}
+
+section .text-container{
+   display: flex;
+}
+
+section .text-container .text-box{
+  margin: 20px;
+  padding: 20px;
+  background: #fdf6ec;
+  flex-grow: 1;
+}
+
+section .text-container .text-box h3{
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 900px){
+  section h1{
+    font-size: 2rem;
+    text-align: center;
+  }
+  section .text-container{
+    flex-direction: column;
+  }
+}
+
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.text-box {
+  background-color: rgba(253, 246, 236, 0.5);
+  border-radius: 8px;
 }

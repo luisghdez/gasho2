@@ -29,3 +29,11 @@
   text-decoration: none;
   color: black !important;
 }
+
+header nav a:hover,
+header nav a.active {
+  background: #fdf6ec;
+  color: #4b7396;
+  transition: 0.5s ease-out;
+  letter-spacing: 2px;
+}
