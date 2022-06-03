@@ -3,9 +3,11 @@
   <h1><%= @sport.name %></h1>
 
   routines for this sport:
-  <ul>
+  <div class='d-flex justify-content-around'>
     <% @routines.each do |r| %>
-    <li><%= r.name %> <%= r.description %> <%= link_to 'go', routine_path(r) %></li>
+      <div class='card routine-card'>
+        <h3><%= r.name %></h3> <p><%= r.description %></p> <%= link_to 'go', routine_path(r) %>
+      </div>
     <% end %>
-  </ul>
+  </div>
 </div>

@@ -328,3 +328,50 @@ stretch = Stretch.new(name: "Supported shoulder stand", description: "", difficu
 stretch.save
 stretch = Stretch.new(name: "Supine angle", description: "From a supine position, the upper back is resting on the earth with the hips straight up toward the sky. The torso is perpendicular to the earth. The legs are fully extended and the toes are active. The hands are either supporting the lower back or extended up by the side body in matchstick. The weight rests on the center of the back of your skull and the neck maintains its natural curvature. The chest reaches towards the chin and the gaze is inward or towards the toes.", difficulty: "Intermediate")
 stretch.save
+
+Sport.create(name: 'Football')
+Sport.create(name: 'Basketball')
+Sport.create(name: 'Volleyball')
+Sport.create(name: 'Golf')
+Sport.create(name: 'Tennis')
+
+warmup = 'This is the perfect routine to warm up for your selected sport. Do this before you start!'
+post = 'The ideal routine to do directly after exercise. This post-exercice routine will have you feeling like new!'
+recovery = 'This routine is for the day after you did this exercise. Recover from your exercise and feel amazing.'
+
+Sport.all.each do |s|
+  r = Routine.new(name: 'Warm-up')
+  r.description = warmup
+  r.imageable = s
+  r.save
+  10.times do
+    a = StretchesRoutine.new
+    a.routine = Routine.last
+    a.stretch = Stretch.order('RANDOM()').first
+    a.save
+  end
+  r = Routine.new(name: 'Post-stretch')
+  r.description = post
+  r.imageable = s
+  r.save
+  10.times do
+    a = StretchesRoutine.new
+    a.routine = Routine.last
+    a.stretch = Stretch.order('RANDOM()').first
+    a.save
+  end
+  r = Routine.new(name: 'Recovery')
+  r.description = recovery
+  r.imageable = s
+  r.save
+  10.times do
+    a = StretchesRoutine.new
+    a.routine = Routine.last
+    a.stretch = Stretch.order('RANDOM()').first
+    a.save
+  end
+end
+
+puts Sport.count
+puts Routine.count
+puts Stretch.count
