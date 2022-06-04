@@ -11,20 +11,27 @@
 // Your CSS partials
 @import "components/index";
 @import "components/navbar";
-// @import "components/footer";
+@import "components/footer";
 @import "pages/index";
 @import "pages/routines";
 @import "pages/sports";
 @import "pages/stretches";
 @import "pages/landing";
 @import "pages/routinestart";
-
+*{
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
 body {
   // background-color: #FDF6EC;
   background-image: url('https://wallpaperaccess.com/full/1732280.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  // padding-bottom : 60px;
+  max-height: calc(100vh - 60px);
+  overflow: scroll;
 }
 
 h1 {
