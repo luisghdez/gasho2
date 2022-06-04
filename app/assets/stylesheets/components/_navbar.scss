@@ -37,3 +37,7 @@ header nav a.active {
   transition: 0.5s ease-out;
   letter-spacing: 2px;
 }
+
+.nonav {
+  display: none !important;
+}

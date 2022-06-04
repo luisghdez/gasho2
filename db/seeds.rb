@@ -292,11 +292,16 @@ Sport.create(name: 'Tennis')
 warmup = 'This is the perfect routine to warm up for your selected sport. Do this before you start!'
 post = 'The ideal routine to do directly after exercise. This post-exercice routine will have you feeling like new!'
 recovery = 'This routine is for the day after you did this exercise. Recover from your exercise and feel amazing.'
+easy = 'Begginer'
+medium = 'Intermediate'
+hard = 'Advanced'
+difficulty = [easy, medium, hard]
 
 Sport.all.each do |s|
   r = Routine.new(name: 'Warm-up')
   r.description = warmup
   r.imageable = s
+  r.difficulty = difficulty.sample
   r.save
   10.times do
     a = StretchesRoutine.new
@@ -307,6 +312,7 @@ Sport.all.each do |s|
   r = Routine.new(name: 'Post-stretch')
   r.description = post
   r.imageable = s
+  r.difficulty = difficulty.sample
   r.save
   10.times do
     a = StretchesRoutine.new
@@ -317,6 +323,7 @@ Sport.all.each do |s|
   r = Routine.new(name: 'Recovery')
   r.description = recovery
   r.imageable = s
+  r.difficulty = difficulty.sample
   r.save
   10.times do
     a = StretchesRoutine.new
