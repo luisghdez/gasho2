@@ -18,4 +18,19 @@
 .foot-element{
   display: flex;
   flex-direction: column;
+  margin: auto;
+}
+
+.foot-element p{
+  margin-bottom: 0px !important;
+}
+
+.foot-element a{
+  text-decoration: none;
+  color: black !important;
+  text-align: center;
+}
+
+.nofooter {
+  display: none !important;
 }
