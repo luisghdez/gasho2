@@ -1,21 +1,17 @@
-<div class='d-flex justify-content-between'>
-  <div class='show-pic'>
-    <%= image_tag('firstyoga.png', class:'pic') %>
-  </div>
-  <div class='d-flex justify-content-end'>
-    <div class='card float d-flex flex-column justify-content-around'>
-      <h1><%= @stretch.name %></h1>
-      <h4><b>Difficulty: </b><%= @stretch.difficulty %></h4>
-      <div>
-        <h4><b>Description: </b></h4>
-        <p><%= @stretch.description %></p>
-      </div>
-
-        <h3>Add this stretch to your routine</h3>
-        <%= simple_form_for [@stretch, @new] do |f| %>
-          <%= f.collection_select :routine, Routine.where(imageable_type: 'User').where(imageable_id: current_user.id), :id, :name %>
-          <%= f.button :submit, '+', class: 'btn btn-primary' %>
-        <% end %>
+<div class='routine-container'>
+  <div class="routine-img">
+    <img src="https://static.hosteltur.com/app/public/uploads/img/releases/2019/05/24/M_160635_bikram-yoga-spain-training.jpg" alt="">
+ </div>
+  <div class='routine-foot'>
+    <div class='card-title'><%= @stretch.name %></div>
+    <div class='card-text'><i class="fa-solid fa-person-running"></i>   <%= @stretch.difficulty %></div>
+    <div class="card-text"><i class="fa-solid fa-stopwatch"></i>   60s</div>
+    <div class="stretch-footer">
+      <%# <p>add this stretch to your routine</p> %>
+      <%= simple_form_for [@stretch, @new] do |f| %>
+        <div class="selector"><%= f.collection_select :routine, Routine.where(imageable_type: 'User').where(imageable_id: current_user.id), :id, :name %></div>
+        <div class="add-btn"><%= f.button :submit, '+', class: 'btn btn-primary' %></div>
+      <% end %>
     </div>
   </div>
 </div>
