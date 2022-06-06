@@ -2,10 +2,9 @@
   background-image: url("https://www.10wallpaper.com/wallpaper/1920x1080/1606/Yoga_silhouette_beautiful_waterside-2016_Sport_HD_Wallpaper_1920x1080.jpg");
   min-height: 100vh;
   background-position: center;
-  background-size: auto;
+  background-size: cover;
   background-attachment: fixed;
   position: relative;
-  z-index: -1;
 }
 
 .container-landing {
@@ -83,6 +82,13 @@ section{
   display: flex;
   justify-content: center;
   align-items: center;
+  a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: whitesmoke;
+  }
 }
 
 section:nth-child(1){

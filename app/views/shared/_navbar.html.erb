@@ -18,12 +18,8 @@
           <ul class="navbar-nav" id= "log-sign">
           <% if user_signed_in? %>
             <li class="nav-item nav-link"><%= link_to "sign out", destroy_user_session_path, method: :delete, class: "nav-item nav-link" %>
-          <% else %>
-            <li class="nav-item nav-link"><%= link_to "sign up", new_user_registration_path %></li>
-            <li class="nav-item nav-link"><%= link_to "log in", new_user_session_path %></li>
           </ul>
-        </ul>
-        <% end %>
+          <% end %>
       </div>
   </div>
 </nav>
