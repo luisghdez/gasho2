@@ -11,13 +11,13 @@
   </head>
 
   <body>
-  <% if content_for? :nav %>
-    <%= content_for :nav %>
-  <% else %>
-    <%= render "shared/navbar" %>
-  <% end %>
+    <% if content_for? :nav %>
+      <%= content_for :nav %>
+    <% else %>
+      <%= render "shared/navbar" %>
+    <% end %>
     <%= yield %>
     <%= yield :after_js %>
-  <%= render "shared/footer" %>
   </body>
+  <%= render "shared/footer" %>
 </html>

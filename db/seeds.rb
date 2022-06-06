@@ -202,7 +202,7 @@ stretch = Stretch.new(name: "Low Push-Up", description: "From a prone position, 
 stretch.save
 stretch = Stretch.new(name: "Rabbit", description: "From Child's pose, rest the torso onto the thighs and the forehead onto the earth. Walk the knees up to meet the forehead, shifting some weight to the crown of the head. Find the maximum comfortable neck stretch and then reach back and grip the base of the feet (use a strap if necessary). To increase the stretch and come into the full expression of the pose, gradually lift or elevate your hips. Be sure to keep your forehead as close as possible to your knees and the topmost part of your skull (crown of the head) on the earth. Contract your abdominal muscles and gaze at your ankles.", difficulty: "Beginner", photo:"https://pocketyoga.com/assets/images/thumbnails146/rabbit-tn146.png")
 stretch.save
-stretch = Stretch.new(name: "Sage Visvamitra's", description: "Begin in Lizard with Straight Arms and place your inside shoulder underneath your front thigh. Curl up your back toes and pivot your foot down as if in a Warrior pose. Ground the palm that is rooted under your front thigh, walk your front foot slightly to the opposite site to get the shoulder deep under your thigh. Begin to shift your weight back slightly. Bend your knee slightly to lift your foot off the ground and then straighten your leg. Ground down firmly to the outer edge of your back foot and your front palm. Roll your chest toward the sky and allow your gaze to follow.", difficulty: "Advanced", photo:"")
+stretch = Stretch.new(name: "Sage Visvamitra's", description: "Begin in Lizard with Straight Arms and place your inside shoulder underneath your front thigh. Curl up your back toes and pivot your foot down as if in a Warrior pose. Ground the palm that is rooted under your front thigh, walk your front foot slightly to the opposite site to get the shoulder deep under your thigh. Begin to shift your weight back slightly. Bend your knee slightly to lift your foot off the ground and then straighten your leg. Ground down firmly to the outer edge of your back foot and your front palm. Roll your chest toward the sky and allow your gaze to follow.", difficulty: "Advanced", photo:"https://pocketyoga.com/assets/images/thumbnails146/visvamitra_full_R-tn146.png")
 stretch.save
 stretch = Stretch.new(name: "Side plank", description: "From an arm balance position the weight of the body is supported on one side and distributed equally between the bottom arm and foot while the other (top) arm lifts with fingers spread wide and the other (top) foot stacks on top. The grounded (bottom) foot is flat and gripping the earth from the outside edge of the foot. If flexibility of the foot is limited then instead of gripping the earth with a flat foot, the weight of the body is balanced on the side edge of the foot that is flexed instead of flat. The arm supporting the weight of the body and the grounded foot actively press into the floor as the shoulder blades firm against the back and then widen away from the spine drawing toward the tailbone. Bandhas are engaged to maintain balance and stability. The crown of the head reaches away from the neck and the gaze is up toward the hand.", difficulty: "Intermediate", photo:"https://pocketyoga.com/assets/images/thumbnails146/plank_side_L-tn146.png")
 stretch.save
@@ -242,7 +242,7 @@ stretch = Stretch.new(name: "Floating stick", description: "Begin in a seated po
 stretch.save
 stretch = Stretch.new(name: "Flying man", description: "From a lunge position, the palms are rooted into the earth on the inside of the thigh. Both elbows are bent in a 90-degree angle with one leg forward, extended and resting softly on the elbow. The other leg is extended back either balanced on the toes or suspended in flight with active toes. The Body is parallel to the earth. The gaze is to the front.", difficulty: "Advanced", photo:"https://pocketyoga.com/assets/images/thumbnails146/lunge_hands_on_mat_flying_L-tn146.png")
 stretch.save
-stretch = Stretch.new(name: "Revolved flying man", description: "Starting from Downward-Facing Dog pose, bend both elbows to a 90-degree angle then cross one leg over the opposite elbow and extend the leg. The other leg is extended back either balanced on the toes or suspended in flight with active toes. The body is parallel to the earth. The gaze is to the front.", difficulty: "Advanced", photo:"")
+stretch = Stretch.new(name: "Revolved flying man", description: "Starting from Downward-Facing Dog pose, bend both elbows to a 90-degree angle then cross one leg over the opposite elbow and extend the leg. The other leg is extended back either balanced on the toes or suspended in flight with active toes. The body is parallel to the earth. The gaze is to the front.", difficulty: "Advanced", photo:"https://pocketyoga.com/assets/images/thumbnails146/flying_man_revolved_L-tn146.png")
 stretch.save
 stretch = Stretch.new(name: "Forearm balance", description: "From an inverted position, with the body perpendicular to the earth, the weight of the body is supported on the forearms that are parallel and pressed firmly into the earth. The palms are flat. The knuckles are evenly pressed into the earth. The fingers are spread wide. Both legs reach up toward the sky in a straight line with the pelvis tucked. The ribcage is lifted. The gaze is forward.", difficulty: "Advanced", photo:"https://pocketyoga.com/assets/images/thumbnails146/feathered_peacock-tn146.png")
 stretch.save
@@ -292,11 +292,16 @@ Sport.create(name: 'Tennis')
 warmup = 'This is the perfect routine to warm up for your selected sport. Do this before you start!'
 post = 'The ideal routine to do directly after exercise. This post-exercice routine will have you feeling like new!'
 recovery = 'This routine is for the day after you did this exercise. Recover from your exercise and feel amazing.'
+easy = 'Begginer'
+medium = 'Intermediate'
+hard = 'Advanced'
+difficulty = [easy, medium, hard]
 
 Sport.all.each do |s|
   r = Routine.new(name: 'Warm-up')
   r.description = warmup
   r.imageable = s
+  r.difficulty = difficulty.sample
   r.save
   10.times do
     a = StretchesRoutine.new
@@ -307,6 +312,7 @@ Sport.all.each do |s|
   r = Routine.new(name: 'Post-stretch')
   r.description = post
   r.imageable = s
+  r.difficulty = difficulty.sample
   r.save
   10.times do
     a = StretchesRoutine.new
@@ -317,6 +323,7 @@ Sport.all.each do |s|
   r = Routine.new(name: 'Recovery')
   r.description = recovery
   r.imageable = s
+  r.difficulty = difficulty.sample
   r.save
   10.times do
     a = StretchesRoutine.new
