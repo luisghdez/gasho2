@@ -3,7 +3,7 @@
     <h1><%= @routine.name %></h1>
     <%= @routine.description %>
     <br>
-    <%= link_to 'start!', '#', class:'btn btn-primary' %>
+    <%= link_to 'start!', routine_routinestart_path(@routine), class:'btn btn-primary' %>
   </div>
  <div class='row'>
     <% @stretches.each do |s| %>
