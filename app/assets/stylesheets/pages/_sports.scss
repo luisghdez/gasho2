@@ -2,23 +2,28 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 .routine-card {
-  height: 400px;
   padding: 10px;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.7);
   margin: 16px;
-  background-image: linear-gradient(rgba(75, 115, 149,0),   rgba(75, 115, 149,1), rgba(75, 115, 149,0));
   border-radius: 10px;
   border: none;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: rgb(0, 0, 0);
+  // align-items: baseline;
 }
 
 .routbtn {
-  color: white;
+  color: rgb(9, 9, 9);
 
   &:hover {
     border: 1px solid rgb(197, 197, 197);
-    color: rgb(197, 197, 197);
+    color: rgb(10, 10, 10);
   }
+}
+
+.routine-pic {
+  // clip: rect(0px,50px,100px,0px);
+  // width: 40%;
+  // object-fit: fill;
 }
