@@ -12,6 +12,11 @@
   }
 }
 
+.images{
+  object-fit: contain;
+  object-position: center;
+}
+
 .show-pic {
   // padding-left: 45px;
   width: 50%;
