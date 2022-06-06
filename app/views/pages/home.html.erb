@@ -8,7 +8,7 @@
   <div class="owl-carousel">
     <% @sports.each do |s| %>
       <%= link_to sport_path(s) do %>
-        <div class='sport-card card p-5'>
+        <div style='background-image: url(<%= s.image %>)' class='sport-card card p-5'>
           <div class='text-center'><%= s.name %></div>
         </div>
       <% end %>
