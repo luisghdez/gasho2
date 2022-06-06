@@ -11,15 +11,13 @@
   </head>
 
   <body>
-    <% if content_for? :nav %>
-      <%= content_for :nav %>
-    <% else %>
+    <% if params[:action] != "routine_start" %>
       <%= render "shared/navbar" %>
     <% end %>
     <%= yield %>
     <%= yield :after_js %>
   </body>
-  <% if !current_page?(root_path) %>
+  <% if params[:action] != "routine_start" && params[:action] != "landing" %>
     <%= render "shared/footer" %>
   <% end %>
 </html>
