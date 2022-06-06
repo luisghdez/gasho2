@@ -1,29 +1,33 @@
 .routine-container{
   display: flex;
-  height: 100vh;
-  width: 100vw;
-  background-color: white;
+  height: calc(100vh - 72px - 70px);
+  width: 80vw;
+  background-color: transparent;
   border-radius: 8px;
   border: none;
   flex-direction: column;
   justify-content: space-between;
+  margin: auto auto 10px auto;
 }
 
 .routine-img{
   position: relative;
-  border-radius: 8px;
-  max-width: 100%;
-  max-height: 400px;
+  border-radius: 8px 8px 0px 0px;
+  max-width: 300px;
+  max-height: 300px;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   object-fit: contain;
+  margin: auto;
 }
 
 .routine-foot{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-color: #4b729570;
+  border-radius: 0px 0px 8px 8px;
 }
 
 .card-title{

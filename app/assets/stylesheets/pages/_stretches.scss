@@ -3,6 +3,7 @@
   height: 36px;
   margin-top: auto;
   margin-bottom: auto;
+  border: none;
 }
 
 .add-btn{
@@ -14,12 +15,16 @@
 .selector {
   margin-top: auto;
   margin-bottom: auto;
-
 }
 
 .stretch-footer {
   margin-bottom: 10px;
   margin-top: 25px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+}
+
+.new_stretches_routine{
+  display: flex;
+  justify-content: space-evenly;
 }
