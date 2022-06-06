@@ -1,11 +1,17 @@
 
 <div class='container'>
   <h1 class='text-center'><%= @sport.name %></h1>
-  <div class='d-flex justify-content-around'>
+  <div class='d-flex flex-column justify-content-around'>
     <% @routines.each do |r| %>
-      <div class='card routine-card'>
-        <h3><%= r.name %></h3> <p><%= r.description %></p> <%= link_to 'view', routine_path(r), class: 'btn routbtn' %>
-      </div>
+      <%= link_to routine_path(r), class: 'card routine-card d-flex' do %>
+      <h3><%= r.name %></h3>
+        <div class='d-flex'>
+          <div class='routine-pic'>
+            <%# <%= image_tag("#{r.stretches.sample.photo}", class: "align-self-center") %>
+          </div>
+          <p><%= r.description %></p>
+        </div>
+      <% end %>
     <% end %>
   </div>
 </div>

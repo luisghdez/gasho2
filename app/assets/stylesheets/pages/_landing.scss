@@ -1,5 +1,5 @@
 .bg-img {
-  background-image: url("https://www.10wallpaper.com/wallpaper/1920x1080/1606/Yoga_silhouette_beautiful_waterside-2016_Sport_HD_Wallpaper_1920x1080.jpg");
+  background-color: transparent;
   min-height: 100vh;
   background-position: center;
   background-size: cover;
@@ -51,7 +51,7 @@
 }
 
 .centered-title {
-  color: #fdf6ec;
+  color: black;
   size: 100%;
   letter-spacing: -0.1rem;
   font-size: 15vw;
@@ -76,6 +76,10 @@
 
 .landnav li{
   color: #fdf6ec;
+}
+
+.sign-up-links a {
+  color: black;
 }
 
 section{
@@ -121,7 +125,7 @@ section h1{
 
 section h2{
   text-align: center;
-  color: #fdf6ec !important;
+  color: black !important;
   font-size: 8vw !important;
 }
 
@@ -132,7 +136,8 @@ section .text-container{
 section .text-container .text-box{
   margin: 20px;
   padding: 20px;
-  background: #fdf6ec;
+  background-color: #b7cadbd8;
+  border-radius: 8px;
   flex-grow: 1;
 }
 
@@ -167,5 +172,9 @@ section .text-container .text-box h3{
 
 .text-box {
   background-color: rgba(253, 246, 236, 0.5);
+  border-radius: 8px;
+}
+
+.text-box img{
   border-radius: 8px;
 }
