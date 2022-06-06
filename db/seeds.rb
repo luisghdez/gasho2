@@ -283,11 +283,11 @@ stretch.save
 stretch = Stretch.new(name: "Supine angle", description: "Begin in a Plow with your hands supporting your hips. With your hips still high, curl your toes under and begin to tip toe your feet apart wider. If you feel strong enough, release your hands from your hips and reach for your toes.", difficulty: "Intermediate", photo:"https://pocketyoga.com/assets/images/full/supine_angle.png")
 stretch.save
 
-Sport.create(name: 'Football')
-Sport.create(name: 'Basketball')
-Sport.create(name: 'Volleyball')
-Sport.create(name: 'Golf')
-Sport.create(name: 'Tennis')
+Sport.create(name: 'Football', image: 'https://thumbs.dreamstime.com/b/print-197018800.jpg')
+Sport.create(name: 'Basketball', image: 'https://static.vecteezy.com/system/resources/previews/000/256/158/original/vector-basketball-illustration.jpg')
+Sport.create(name: 'Volleyball', image: 'https://img.freepik.com/free-vector/volleyball-women-illustration_190305-30.jpg?w=2000')
+Sport.create(name: 'Golf', image: 'https://cdn.dribbble.com/users/1754196/screenshots/9680790/media/a34c72dab866709971522d87994683ec.jpg?compress=1&resize=400x300')
+Sport.create(name: 'Tennis', image: 'https://i.pinimg.com/originals/90/83/fc/9083fc2a1dc437f02ee9ddbe168f28f6.png')
 
 warmup = 'This is the perfect routine to warm up for your selected sport. Do this before you start!'
 post = 'The ideal routine to do directly after exercise. This post-exercice routine will have you feeling like new!'
