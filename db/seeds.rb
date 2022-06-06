@@ -6,52 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Sport.create(name: 'Football')
-Sport.create(name: 'Basketball')
-Sport.create(name: 'Volleyball')
-Sport.create(name: 'Golf')
-Sport.create(name: 'Tennis')
 
-warmup = 'This is the perfect routine to warm up for your selected sport. Do this before you start!'
-post = 'The ideal routine to do directly after exercise. This post-exercice routine will have you feeling like new!'
-recovery = 'This routine is for the day after you did this exercise. Recover from your exercise and feel amazing.'
-
-Sport.all.each do |s|
-  r = Routine.new(name: 'Warm-up')
-  r.description = warmup
-  r.imageable = s
-  r.save
-  10.times do
-    a = StretchesRoutine.new
-    a.routine = Routine.last
-    a.stretch = Stretch.order('RANDOM()').first
-    a.save
-  end
-  r = Routine.new(name: 'Post-stretch')
-  r.description = post
-  r.imageable = s
-  r.save
-  10.times do
-    a = StretchesRoutine.new
-    a.routine = Routine.last
-    a.stretch = Stretch.order('RANDOM()').first
-    a.save
-  end
-  r = Routine.new(name: 'Recovery')
-  r.description = recovery
-  r.imageable = s
-  r.save
-  10.times do
-    a = StretchesRoutine.new
-    a.routine = Routine.last
-    a.stretch = Stretch.order('RANDOM()').first
-    a.save
-  end
-end
-
-puts Sport.count
-puts Routine.count
-puts Stretch.count
 
 stretch = Stretch.new(name: "Standing Splits", description: "From standing forward bend, lift your gaze and find a focal point on the ground in front of you. Walk your fingers out slightly in front of you. Shift your weight to one foot and lift your opposite leg up toward the sky. Focus on keeping your chest connected to the thigh of your grounded leg, even if you need to take a slight bend in your knee. The hip of your lifted leg should be squared, just like your grounded leg. Keep the hip bone of your lifted leg pointed downward and your toes rotated inward toward the midline of your body.", difficulty: "Intermediate", photo:"https://pocketyoga.com/assets/images/thumbnails146/splits_standing_R-tn146.png")
 stretch.save
@@ -327,5 +282,52 @@ stretch = Stretch.new(name: "Supported shoulder stand", description: "From a sup
 stretch.save
 stretch = Stretch.new(name: "Supine angle", description: "Begin in a Plow with your hands supporting your hips. With your hips still high, curl your toes under and begin to tip toe your feet apart wider. If you feel strong enough, release your hands from your hips and reach for your toes.", difficulty: "Intermediate", photo:"https://pocketyoga.com/assets/images/full/supine_angle.png")
 stretch.save
+
+Sport.create(name: 'Football')
+Sport.create(name: 'Basketball')
+Sport.create(name: 'Volleyball')
+Sport.create(name: 'Golf')
+Sport.create(name: 'Tennis')
+
+warmup = 'This is the perfect routine to warm up for your selected sport. Do this before you start!'
+post = 'The ideal routine to do directly after exercise. This post-exercice routine will have you feeling like new!'
+recovery = 'This routine is for the day after you did this exercise. Recover from your exercise and feel amazing.'
+
+Sport.all.each do |s|
+  r = Routine.new(name: 'Warm-up')
+  r.description = warmup
+  r.imageable = s
+  r.save
+  10.times do
+    a = StretchesRoutine.new
+    a.routine = Routine.last
+    a.stretch = Stretch.order('RANDOM()').first
+    a.save!
+  end
+  r = Routine.new(name: 'Post-stretch')
+  r.description = post
+  r.imageable = s
+  r.save
+  10.times do
+    a = StretchesRoutine.new
+    a.routine = Routine.last
+    a.stretch = Stretch.order('RANDOM()').first
+    a.save!
+  end
+  r = Routine.new(name: 'Recovery')
+  r.description = recovery
+  r.imageable = s
+  r.save
+  10.times do
+    a = StretchesRoutine.new
+    a.routine = Routine.last
+    a.stretch = Stretch.order('RANDOM()').first
+    a.save!
+  end
+end
+
+puts Sport.count
+puts Routine.count
+puts Stretch.count
 
 puts "seeds created #{Stretch.count}"

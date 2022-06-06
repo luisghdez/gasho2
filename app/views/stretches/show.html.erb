@@ -1,17 +1,21 @@
 <div class='d-flex justify-content-between'>
-  <div>
-    <%= image_tag('firstyoga.png', class:'card-pic') %>
+  <div class='show-pic'>
+    <%= image_tag("#{@stretch.photo}", class:'pic') %>
   </div>
-  <div class='card float'>
-    <h1><%= @stretch.name %></h1>
-    <h4><b>Difficulty: </b><%= @stretch.difficulty %></h4>
-    <h4><b>Description: </b></h4>
-    <p><%= @stretch.description %></p>
+  <div class='d-flex justify-content-end'>
+    <div class='card float d-flex flex-column justify-content-around'>
+      <h1><%= @stretch.name %></h1>
+      <h4><b>Difficulty: </b><%= @stretch.difficulty %></h4>
+      <div>
+        <h4><b>Description: </b></h4>
+        <p><%= @stretch.description %></p>
+      </div>
 
-      <h3>Add this stretch to your routine</h3>
-      <%= simple_form_for [@stretch, @new] do |f| %>
-        <%= f.collection_select :routine, Routine.where(imageable_type: 'User').where(imageable_id: current_user.id), :id, :name %>
-        <%= f.button :submit, '+', class: 'btn btn-primary' %>
-      <% end %>
+        <h3>Add this stretch to your routine</h3>
+        <%= simple_form_for [@stretch, @new] do |f| %>
+          <%= f.collection_select :routine, Routine.where(imageable_type: 'User').where(imageable_id: current_user.id), :id, :name %>
+          <%= f.button :submit, '+', class: 'btn btn-primary' %>
+        <% end %>
+    </div>
   </div>
 </div>

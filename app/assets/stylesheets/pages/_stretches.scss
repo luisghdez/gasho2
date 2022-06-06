@@ -1,13 +1,30 @@
 .float {
-  background-color: rgba($color: #4B7395, $alpha: 0.4);
+  background-color: rgba(75, 115, 149, 0.2);
   padding: 16px;
   width: 65%;
+  border: none;
+  height: 60vh;
+  color: white;
+  border-radius: 10px 0 0 10px;
 
   h4 {
     color: white;
   }
 }
+
 .images{
   object-fit: contain;
   object-position: center;
+}
+
+.show-pic {
+  // padding-left: 45px;
+  width: 50%;
+  height: auto;
+  align-items: center;
+}
+
+.pic {
+  width: 100%;
+  height: auto;
 }
