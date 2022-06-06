@@ -7,10 +7,10 @@
   %>
   <%= submit_tag "Search", class: "btn btn-primary" %>
 <% end %>
-  <h1>all stretches</h1>
-  <div class='row d-flex justify-content-around'>
+  <h1>All Stretches</h1>
+  <div class='row'>
       <% @stretches.each do |s| %>
-        <%= link_to stretch_path(s), class: 'col-lg-3 col-sm-6 card stretch-card' do %>
+        <%= link_to stretch_path(s), class: 'col-6 card stretch-card' do %>
           <div>
             <%= image_tag("#{s.photo}", class: "images card-pic") %>
             <h4 class='text-center'><%= s.name %></h4>
