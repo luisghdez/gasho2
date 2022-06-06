@@ -19,5 +19,7 @@
     <%= yield %>
     <%= yield :after_js %>
   </body>
-  <%= render "shared/footer" %>
+  <% if !current_page?(root_path) %>
+    <%= render "shared/footer" %>
+  <% end %>
 </html>
