@@ -1,14 +1,15 @@
-<div class='routine-container'>
-  <div class="routine-img">
-    <img src="https://www.stylist.co.uk/images/app/uploads/2020/09/11131705/pre-workout-stretches-crop-1599826810-1280x1280.jpg?w=1200&h=1&fit=max&auto=format%2Ccompress" alt="" style="height:300px" style="width:256px">
- </div>
-  <div class='routine-foot'>
-    <div class='card-title'><%= @routine.name %></div>
-    <div class='card-text'><i class="fa-solid fa-person-running"></i>   <%= @routine.difficulty %></div>
-    <div class="card-text"><i class="fa-solid fa-stopwatch"></i><%= @routine.duration %></div>
-    <div class="card-text des"><%= @routine.description %></div>
-    <div class="start">
-      <%= link_to 'start routine', routines_path(:id), class: 'btn btn-primary btn-lg', id: "start" %></div>
-    </div>
+<div class='container'>
+  <div class='routine-head'>
+    <h1><%= @routine.name %></h1>
+    <%= @routine.description %>
+    <br>
+    <%= link_to 'start!', '#', class:'btn btn-primary' %>
   </div>
+ <div class='row'>
+    <% @stretches.each do |s| %>
+      <%= link_to stretch_path(s), class: 'col-6 card stretch-card' do %>
+          <%= image_tag("#{s.photo}", class: "card-pic") %>
+          <h4 class='text-center'><b><%= s.name %></b></h4>
+      <% end %>
+    <% end %>
 </div>
