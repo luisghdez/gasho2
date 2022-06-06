@@ -1,6 +1,6 @@
 <div class='routine-container'>
   <div class="routine-img">
-    <img src="https://static.hosteltur.com/app/public/uploads/img/releases/2019/05/24/M_160635_bikram-yoga-spain-training.jpg" alt="">
+    <img src="https://pocketyoga.com/assets/images/thumbnails146/cobra_full-tn146.png" alt="" widht="300px" height="300px">
  </div>
   <div class='routine-foot'>
     <div class='card-title'><%= @stretch.name %></div>
@@ -10,7 +10,7 @@
       <%# <p>add this stretch to your routine</p> %>
       <%= simple_form_for [@stretch, @new] do |f| %>
         <div class="selector"><%= f.collection_select :routine, Routine.where(imageable_type: 'User').where(imageable_id: current_user.id), :id, :name %></div>
-        <div class="add-btn"><%= f.button :submit, '+', class: 'btn btn-primary' %></div>
+        <div class="add-btn"><%= f.button :submit, 'add to your routine', class: 'btn btn-primary' %></div>
       <% end %>
     </div>
   </div>

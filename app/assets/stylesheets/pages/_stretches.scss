@@ -1,8 +1,56 @@
+.routine-container{
+  display: flex;
+  height: calc(100vh - 72px - 70px);
+  width: 80vw;
+  background-color: transparent;
+  border-radius: 8px;
+  border: none;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: auto auto 10px auto;
+}
+
+.routine-img{
+  position: relative;
+  border-radius: 8px 8px 0px 0px;
+  max-width: 300px;
+  max-height: 300px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  object-fit: contain;
+  margin: auto;
+}
+
+.routine-foot{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #4b729570;
+  border-radius: 0px 0px 8px 8px;
+}
+
+.card-title{
+  color: black;
+  text-transform: lowercase;
+  font-size: 36px;
+  margin-left: 10px;
+}
+.card-text{
+  color: black;
+  text-transform: lowercase;
+  font-size: 18px;
+  margin-left: 10px;
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  font-weight: normal;
+}
+
 #stretches_routine_routine {
   border-radius: 8px;
   height: 36px;
   margin-top: auto;
   margin-bottom: auto;
+  border: none;
 }
 
 .add-btn{
@@ -14,12 +62,16 @@
 .selector {
   margin-top: auto;
   margin-bottom: auto;
-
 }
 
 .stretch-footer {
   margin-bottom: 10px;
   margin-top: 25px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+}
+
+.new_stretches_routine{
+  display: flex;
+  justify-content: space-evenly;
 }
