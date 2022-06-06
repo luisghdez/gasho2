@@ -280,8 +280,6 @@ stretch = Stretch.new(name: "Shoulder stand with lotus legs", description: "From
 stretch.save
 stretch = Stretch.new(name: "Supported shoulder stand", description: "From a supine position, the upper back is resting on the earth with the hips straight up toward the sky. The torso is perpendicular to the earth. The legs are fully extended and the toes are active. The hands are either supporting the lower back or extended up by the side body in matchstick. The weight rests on the center of the back of your skull and the neck maintains its natural curvature. The chest reaches towards the chin and the gaze is inward or towards the toes.", difficulty: "Intermediate", photo:"https://pocketyoga.com/assets/images/thumbnails146/shoulderstand_supported-tn146.png")
 stretch.save
-stretch = Stretch.new(name: "Supine angle", description: "Begin in a Plow with your hands supporting your hips. With your hips still high, curl your toes under and begin to tip toe your feet apart wider. If you feel strong enough, release your hands from your hips and reach for your toes.", difficulty: "Intermediate", photo:"https://pocketyoga.com/assets/images/thumbnails146/supine_angle-tn146.png")
-stretch.save
 
 Sport.create(name: 'Football')
 Sport.create(name: 'Basketball')
