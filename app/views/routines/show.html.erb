@@ -1,17 +1,14 @@
-<div class='container'>
-  <div class='routine-head'>
-    <h1><%= @routine.name %></h1>
-    <%= @routine.description %>
-
-    <p>This routine consists of all of these stretches: </p>
+<div class='routine-container'>
+  <div class="routine-img">
+    <img src="https://static.hosteltur.com/app/public/uploads/img/releases/2019/05/24/M_160635_bikram-yoga-spain-training.jpg" alt="">
+ </div>
+  <div class='routine-foot'>
+    <div class='card-title'><%= @routine.name %></div>
+    <div class='card-text'><i class="fa-solid fa-person-running"></i>   <%= @routine.difficulty %></div>
+    <div class="card-text"><i class="fa-solid fa-stopwatch"></i><%= @routine.duration %></div>
+    <div class="card-text des"><%= @routine.description %></div>
+    <div class="start">
+      <%= link_to 'start routine', routines_path(:id), class: 'btn btn-primary btn-lg', id: "start" %></div>
+    </div>
   </div>
- <div class='row d-flex justify-content-around'>
-    <% @stretches.each do |s| %>
-      <%= link_to stretch_path(s), class: 'col-lg-3 col-sm-6 card stretch-card' do %>
-        <div>
-          <%= image_tag("firstyoga.png", class: "card-pic") %>
-          <h4 class='text-center'><b><%= s.name %></b></h4>
-        </div>
-      <% end %>
-    <% end %>
 </div>

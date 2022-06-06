@@ -1,4 +1,4 @@
-<nav class="navbar navbar-light navbar-expand-md py-3 <%= 'landnav' if current_page?(root_path) %>">
+<nav class="navbar navbar-light navbar-expand-md py-3" <%= 'landnav' if current_page?(root_path) %> <%='nonav' if current_page?(routines_path) %> >
   <div class="container-fluid nav-2">
     <a class="navbar-brand d-flex align-items-center" href="/home">
       <span class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon">
