@@ -4,6 +4,7 @@ class CreateRoutines < ActiveRecord::Migration[6.1]
       t.string :name
       t.integer :duration
       t.string :description
+      t.string :difficulty
       t.references :sport, null: false, foreign_key: true
 
       t.timestamps
