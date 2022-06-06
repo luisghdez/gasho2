@@ -5,7 +5,15 @@
   </div> %>
 
   <section>
-    <div class="centered-title container-landing">welcometogasho.</div>
+    <div class="centered-title container-landing">
+    welcometogasho.
+    <% if !user_signed_in? %>
+      <div class="sign-up-links">
+        <%= link_to "sign-up", new_user_registration_path %>
+        <%= link_to "log in", new_user_session_path %>
+      </div>
+    <% end %>
+    </div>
   </section>
 
   <section id="sports">

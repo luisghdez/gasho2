@@ -1,3 +1,4 @@
+<% if @myroutines %>
 <div class='container'>
   <div class='header'>
     <h1 style='color:#4B7395'>find the perfect routine <span style='color:white'>for you.</span></h1>
@@ -27,6 +28,7 @@
   <% end %>
   <%# <%= link_to 'yoga centers near me','#', class:'btn btn-primary' %>
 </div>
+<% end %>
 
 <%= content_for(:after_js) do %>
   <script>
