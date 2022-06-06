@@ -14,15 +14,15 @@
           <li class="nav-item active"><a class="nav-link active" href="#sports">sports</a></li>
           <li class="nav-item"><a class="nav-link" href="#routines">routines</a></li>
           <li class="nav-item"><a class="nav-link" href="#stretches">stretches</a></li>
-          </ul>
-          <ul class="navbar-nav" id= "log-sign">
+        </ul>
+        <ul class="navbar-nav" id= "log-sign">
           <% if user_signed_in? %>
             <li class="nav-item nav-link"><%= link_to "sign out", destroy_user_session_path, method: :delete, class: "nav-item nav-link" %>
-            <li class="nav-item nav-link"><%= link_to "all stretches", stretches_path, class: "nav-item nav-link" %>
+            <li class="nav-item nav-link"><%= link_to "all stretches", stretches_path, class: "nav-item nav-link" %></li>
           <% else %>
-            <li class="nav-item nav-link"><%= link_to "sign up", new_user_registration_path %></li>
-            <li class="nav-item nav-link"><%= link_to "log in", new_user_session_path %></li>
-          </ul>
+          <li class="nav-item nav-link"><%= link_to "sign up", new_user_registration_path %></li>
+          <li class="nav-item nav-link"><%= link_to "log in", new_user_session_path %></li>
+        </ul>
         </ul>
         <% end %>
       </div>
