@@ -4,12 +4,13 @@
     <%= @routine.description %>
     <br>
     <%= link_to 'start!', routine_routinestart_path(@routine), class:'btn btn-primary' %>
+    <%= link_to "Delete this routine", routine_path(@routine),method: :delete, data: { confirm: "Are you sure?" }, class:'btn btn-primary' %>
   </div>
  <div class='row'>
     <% @stretches.each do |s| %>
       <%= link_to stretch_path(s), class: 'col-6 card stretch-card' do %>
           <%= image_tag("#{s.photo}", class: "card-pic") %>
-          <h4 class='text-center'><b><%= s.name %></b></h4>
+          <h4 class='text-center'><%= s.name %></h4>
       <% end %>
     <% end %>
 </div>
