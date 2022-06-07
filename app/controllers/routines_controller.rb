@@ -24,9 +24,12 @@ class RoutinesController < ApplicationController
     @stretches = @routine.stretches
   end
 
+  def destroy
+  end
+
   private
 
   def routines_params
-    params.require(:routine).permit(:name, :description)
+    params.require(:routine).permit(:name, :description, :background)
   end
 end
