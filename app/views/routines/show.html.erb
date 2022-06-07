@@ -10,7 +10,7 @@
     <% @stretches.each do |s| %>
       <%= link_to stretch_path(s), class: 'col-6 card stretch-card' do %>
           <%= image_tag("#{s.photo}", class: "card-pic") %>
-          <h4 class='text-center'><b><%= s.name %></b></h4>
+          <h4 class='text-center'><%= s.name %></h4>
       <% end %>
     <% end %>
 </div>
