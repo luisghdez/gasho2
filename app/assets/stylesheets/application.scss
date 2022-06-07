@@ -22,7 +22,7 @@
 *{
   margin: 0;
   padding: 0;
-  overflow: auto;
+  overflow: hidden;
 }
 
 body {
@@ -32,7 +32,6 @@ body {
   background-attachment: fixed;
   background-size: cover;
   // padding-bottom : 60px;
-  max-height: calc(100vh - 60px);
   overflow: scroll;
 }
 

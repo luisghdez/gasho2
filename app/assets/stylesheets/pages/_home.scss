@@ -1,19 +1,24 @@
 // Specific CSS for your home-page
 
 .sport-card {
-  background-color: #B7CADB;
+  background-color: rgba(75, 115, 149, 0.5);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   border-radius: 10px;
   padding: 25px;
   text-decoration: none;
-  color: #F3E9DD;
+  color: #ffffff;
   border: none;
+
 }
 
 .header {
   text-align: center;
+  padding-bottom: 16px;
+  h1 {
+    font-size: 33px;
+  }
 }
 
 a {
