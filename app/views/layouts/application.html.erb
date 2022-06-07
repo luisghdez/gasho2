@@ -17,7 +17,11 @@
     <%= yield %>
     <%= yield :after_js %>
   </body>
-  <% if params[:action] != "routine_start" && params[:action] != "landing" %>
-    <%= render "shared/footer" %>
+  <% if content_for? :nonav %>
+    <%= content_for :nonav %>
+  <% elsif content_for? :landing %>
+    <%= content_for :landing %>
+  <% else %>
+    <%= render 'shared/footer' %>
   <% end %>
 </html>
