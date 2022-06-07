@@ -1,4 +1,4 @@
-.footer{
+.nofooter{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -7,26 +7,21 @@
   bottom: 0;
   width: 100%;
   height: 60px;
-  background-color: transparent;
+  background-color: black;
 }
 
-.icon{
-  margin-left:auto;
-  margin-right:auto;
-}
-
-.foot-element{
+.nofoot-element{
   display: flex;
   flex-direction: column;
   margin: auto;
 }
 
-.foot-element p{
+.nofoot-element p{
   margin-bottom: 0px !important;
 }
 
-.foot-element a{
+.nofoot-element a{
   text-decoration: none;
-  color: #FDF6EC !important;
+  color: #4b7395 !important;
   text-align: center;
 }
