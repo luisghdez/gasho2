@@ -1,19 +1,20 @@
 
 
 import { Controller } from "@hotwired/stimulus"
+import { Carousel } from "bootstrap"
 import { green } from "@mui/material/colors";
 
 export default class extends Controller {
-  static targets = ["timer", "color"]
+  static targets = ["timer", "color", "carousel"]
 
   connect() {
+
     console.log(this.timerTarget)
-    this.timeLeft = 60; // Initial time of 1 minute
-    this.timerTarget.innerHTML = this.formatTimeLeft()
     this.timerInterval = null;
-    this.time_limit = 60;
-    this.timePassed = 0
+    this.time_limit = 3;
     this.timeLeft = this.time_limit
+    this.timerTarget.innerHTML = this.formatTimeLeft()
+    this.carousel = new Carousel(this.carouselTarget, { ride: false })
     this.startTimer()
   }
 
@@ -37,14 +38,24 @@ export default class extends Controller {
     this.timerInterval = setInterval(() => {
 
       // The amount of time passed increments by one
-      this.timePassed += 1;
-      this.timeLeft = this.time_limit - this.timePassed;
+      this.timeLeft -= 1;
 
       // The time left label is updated
-      this.timerTarget.innerHTML = this.formatTimeLeft(this.timeLeft);
 
+      if (this.timeLeft === -1) {
+        this.nextStretch();
+      }
+
+      this.timerTarget.innerHTML = this.formatTimeLeft(this.timeLeft);
       this.setCircleDasharray();
+
     }, 1000);
+  }
+
+  nextStretch() {
+    this.timeLeft = this.time_limit;
+
+    this.carousel.next();
   }
 
   calculateTimeFraction() {

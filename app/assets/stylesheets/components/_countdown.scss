@@ -18,6 +18,7 @@
 
 .base-timer__label {
   position: absolute;
+  color: white;
 
   /* Size should match the parent container */
   width: 300px;
@@ -50,7 +51,7 @@
   transition: 1s linear all;
 
   /* Allows the ring to change color when the color value updates */
-  stroke: #42a7ff;
+  stroke: #55A4BA;
 }
 
 .base-timer__svg {
