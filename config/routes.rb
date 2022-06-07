@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'home', to: 'pages#home'
 
   resources :sports, only: [:index, :show, :new, :create]
-  resources :routines, only: [:new, :create, :show] do
+  resources :routines, only: [:new, :create, :show, :destroy] do
     get 'routinestart', to: 'routines#routine_start'
   end
   resources :stretches, only: [:index, :show] do

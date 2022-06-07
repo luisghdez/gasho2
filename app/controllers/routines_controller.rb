@@ -25,6 +25,10 @@ class RoutinesController < ApplicationController
   end
 
   def destroy
+    @routine = Routine.find_by(imageable_id: current_user.id)
+    @routine.destroy
+
+    redirect_to home_path
   end
 
   private
