@@ -3,5 +3,6 @@
 <%= simple_form_for @newroutine do |f| %>
   <%= f.input :name %>
   <%= f.input :description %>
+  <%= f.file_field :background, placeholder:"Routine picture URL *", label: false %>
   <%= f.submit 'submit', class: 'btn btn-primary' %>
 <% end %>
