@@ -3,15 +3,15 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
+//= require_tree .
+
+
 import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
-import { Application } from '@hotwired/stimulus'
-import ContentLoader from 'stimulus-content-loader'
+import "controllers"
 
-const application = Application.start()
-application.register('content-loader', ContentLoader);
 
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel';
