@@ -1,13 +1,17 @@
 <div class='container'>
-<%= form_tag stretches_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Find a stretch"
-  %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
-<% end %>
   <h1>All Stretches</h1>
+  <div id="Search">
+    <%= form_tag stretches_path, method: :get, id: "searchbar" do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Find a stretch or the difficulty"
+      %>
+    <% end %>
+    <%= button_tag type: 'submit', class: "btn-unset", id: "search-button" do %>
+      <i class="fas fa-search" aria-hidden="true"></i>
+    <% end %>
+  </div>
   <div class='row'>
       <% @stretches.each do |s| %>
         <%= link_to stretch_path(s), class: 'col-6 card stretch-card' do %>

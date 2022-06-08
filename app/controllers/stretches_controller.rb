@@ -1,5 +1,6 @@
 class StretchesController < ApplicationController
   def index
+    # raise
     if params[:query].present?
       sql_query = " \
         stretches.name @@ :query \

@@ -45,7 +45,7 @@ img{
   text-transform: lowercase;
   font-size: 18px;
   margin-left: 10px;
-  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  font-family: 'Jost', sans-serif;
   font-weight: normal;
 }
 
@@ -78,4 +78,8 @@ img{
 .new_stretches_routine{
   display: flex;
   justify-content: space-evenly;
+}
+
+#searchbar {
+  position: relative;
 }
