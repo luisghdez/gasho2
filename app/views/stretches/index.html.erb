@@ -1,12 +1,14 @@
 <div class='container'>
-<%= form_tag stretches_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Find a stretch"
-  %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
-<% end %>
+  <div id="Search">
+    <%= form_tag stretches_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Find a stretch"
+      %>
+    <% end %>
+      <%= submit_tag "Search", class: "btn btn-primary"%>
+  </div>
   <h1>All Stretches</h1>
   <div class='row'>
       <% @stretches.each do |s| %>
