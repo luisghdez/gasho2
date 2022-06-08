@@ -1,5 +1,29 @@
 <% content_for :nonav, render('shared/nofoot') %>
 
+<%# <div data-controller="routine-start">
+  <div class="base-timer">
+    <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <g class="base-timer__circle">
+        <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45" />
+        <path
+          data-routine-start-target="color"
+          id="base-timer-path-remaining"
+          stroke-dasharray="283"
+          class="base-timer__path-remaining blue"
+          d="
+            M 50, 50
+            m -45, 0
+            a 45,45 0 1,0 90,0
+            a 45,45 0 1,0 -90,0
+          "
+        ></path>
+      </g>
+    </svg>
+    <span data-routine-start-target="timer" class="base-timer__label">
+      <!-- Remaining time label -->
+    </span>
+  </div>
+</div> %>
 <div class="car-container">
   <div data-controller="routine-start">
     <div class="base-timer">
@@ -27,7 +51,6 @@
     <div id="carouselExampleSlidesOnly" class="vertical carousel slide" data-routine-start-target="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <%# <img src="https://pocketyoga.com/assets/images/full/chair_twist_bind_up_L.png" class="d-block w-100" alt="..."> %>
           <div class='card routine-start-head'>
             <h1>Are you <br><span style='color: #55A4BA'>ready?</span></h1>
           </div>
@@ -45,6 +68,6 @@
       <% end %>
       </div>
     </div>
+    <%# <%= audio_tag("https://cdn.pixabay.com/download/audio/2022/03/09/audio_97e49df2bd.mp3?filename=freezing-night-28066.mp3", autoplay: true, controls: true) %>
   </div>
-
 </div>

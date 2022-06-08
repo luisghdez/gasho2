@@ -29,3 +29,15 @@
   align-items: center;
   text-align: center;
 }
+
+.btn-unset {
+  all: unset;
+  cursor: pointer;
+}
+
+#search-button {
+  color: rgb(25, 41, 60);
+  position: relative;
+  right: 26px;
+  top: 2px;
+}
