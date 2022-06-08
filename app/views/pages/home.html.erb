@@ -4,8 +4,8 @@
     <h1 style='color:#4B7395'>find the perfect routine <span style='color:white'>for you.</span></h1>
     <%# <p>*search bar goes here*</p> %>
   </div>
-  <h3 style='color:#000000'>special sport routines</h3>
-  <div class="owl-carousel">
+  <h3 style='color:#4B7395'>special sport routines</h3>
+  <div class="owl-carousel" data-controller="home-carousel">
     <% @sports.each do |s| %>
       <%= link_to sport_path(s) do %>
         <div style='background-image:  linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= s.image %>)' class='sport-card card p-5'>
@@ -16,7 +16,7 @@
   </div>
   <h3 style='color:#000000'>my routines <%= link_to '+', new_routine_path, class:'btn btn-primary rounded-circle' %></h3>
   <% if @myroutines %>
-    <div class="owl-carousel">
+    <div class="owl-carousel" data-controller="home-carousel">
       <% @myroutines.each do |s| %>
         <div>
           <%= link_to routine_path(s) do %>
@@ -36,24 +36,4 @@
   <% end %>
   <%# <%= link_to 'yoga centers near me','#', class:'btn btn-primary' %>
 </div>
-<% end %>
-
-<%= content_for(:after_js) do %>
-  <script>
-    $(document).ready(function(){
-    $('.owl-carousel').owlCarousel({
-        stagePadding: 50,
-        loop: true,
-        margin:10,
-        responsive:{
-          0:{
-            items:1
-          },
-          600:{
-          items:3
-          }
-        }
-      })
-    });
-  </script>
 <% end %>
