@@ -11,7 +11,7 @@ export default class extends Controller {
 
     console.log(this.timerTarget)
     this.timerInterval = null;
-    this.time_limit = 3;
+    this.time_limit = 3; //implemente stretch duration here
     this.timeLeft = this.time_limit
     this.timerTarget.innerHTML = this.formatTimeLeft()
     this.carousel = new Carousel(this.carouselTarget, { ride: false })
@@ -53,13 +53,19 @@ export default class extends Controller {
   }
 
   nextStretch() {
-    this.timeLeft = this.time_limit;
+    this.timeLeft = 30;
+    this.time_limit = 30;
+    // this.timeLeft = this.time_limit; leave this line when stretch seconds implemented
 
     this.carousel.next();
   }
 
   calculateTimeFraction() {
-    return this.timeLeft / this.time_limit;
+    if (this.timeLeft > 10) {
+      return this.timeLeft / 30
+    } else {
+      return this.timeLeft / this.time_limit; // leave only this line when stretch seconds are implemented
+    }
   }
 
   setCircleDasharray() {
