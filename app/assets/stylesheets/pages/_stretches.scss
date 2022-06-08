@@ -31,17 +31,17 @@ img{
   flex-direction: column;
   justify-content: space-between;
   background-color: #4b729570;
-  border-radius: 0px 0px 8px 8px;
+  border-radius: 10px;
 }
 
 .card-title{
-  color: black;
+  color: rgb(255, 255, 255);
   text-transform: lowercase;
   font-size: 36px;
   margin-left: 10px;
 }
 .card-text{
-  color: black;
+  color: rgb(255, 255, 255);
   text-transform: lowercase;
   font-size: 18px;
   margin-left: 10px;
@@ -80,6 +80,12 @@ img{
   justify-content: space-evenly;
 }
 
+<<<<<<< HEAD
+
+.stretch-routine {
+  padding-bottom: 8px;
+=======
 #searchbar {
   position: relative;
+>>>>>>> f107487a243256f4e493f5d7c337cbc89fdb21b4
 }
