@@ -1,0 +1,21 @@
+import { Controller } from "@hotwired/stimulus"
+import $ from "jquery"
+import "owl.carousel"
+
+export default class extends Controller {
+  connect() {
+    $(this.element).owlCarousel({
+      stagePadding: 50,
+      loop: true,
+      margin:10,
+      responsive:{
+        0:{
+          items:1
+        },
+        600:{
+        items:3
+        }
+      }
+    })
+  }
+}
