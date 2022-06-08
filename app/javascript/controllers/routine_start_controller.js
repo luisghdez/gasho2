@@ -5,16 +5,20 @@ import { Carousel } from "bootstrap"
 import { green } from "@mui/material/colors";
 
 export default class extends Controller {
-  static targets = ["timer", "color", "carousel"]
+  static targets = ["timer", "color", "carousel", "counter"]
+
+  static values = {
+    count: Number
+  }
 
   connect() {
-
-    console.log(this.timerTarget)
+    this.carouselCount = 0
+    console.log(this.carouselCount)
     this.timerInterval = null;
     this.time_limit = 3; //implemente stretch duration here
     this.timeLeft = this.time_limit
     this.timerTarget.innerHTML = this.formatTimeLeft()
-    this.carousel = new Carousel(this.carouselTarget, { ride: false })
+    this.carousel = new Carousel(this.carouselTarget, { ride: false, wrap: false })
     this.startTimer()
   }
 
@@ -53,11 +57,14 @@ export default class extends Controller {
   }
 
   nextStretch() {
-    this.timeLeft = 30;
-    this.time_limit = 30;
+    this.timeLeft = 3;
+    this.time_limit = 3;
     // this.timeLeft = this.time_limit; leave this line when stretch seconds implemented
-
+    this.carouselCount += 1
     this.carousel.next();
+    if (this.carouselCount > this.countValue) {
+      this.counterTarget.classList.add('d-none')
+    }
   }
 
   calculateTimeFraction() {
