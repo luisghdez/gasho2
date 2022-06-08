@@ -7,11 +7,18 @@
     <div class='card-text'><i class="fa-solid fa-person-running"></i>   <%= @stretch.difficulty %></div>
     <div class="card-text"><i class="fa-solid fa-stopwatch"></i>   60s</div>
     <div class="stretch-footer">
+<<<<<<< HEAD
     <% if current_user.routines.last != @stretch.routines.last %>
         <%= simple_form_for [@stretch, @new], defaults: { input_html: { class: 'stretch-routine' } } do |f| %>
+=======
+      <% if current_user.routines.last != @stretch.routines.last %>
+        <%= simple_form_for [@stretch, @new] do |f| %>
+>>>>>>> f107487a243256f4e493f5d7c337cbc89fdb21b4
           <div class="selector"><%= f.collection_select :routine, Routine.where(imageable_type: 'User').where(imageable_id: current_user.id), :id, :name %></div>
-          <div class="add-btn"><%= f.button :submit, 'add to your routine', class: 'btn btn-primary' %></div>
+          <div class="add-btn"><%= f.button :submit, 'Add to your routine', class: 'btn btn-primary' %></div>
         <% end %>
+      <% else  %>
+        <%= link_to "Add to your routine", new_routine_path , class: "btn btn-primary"%>
       <% end %>
     </div>
   </div>
