@@ -20,9 +20,15 @@
       <% @myroutines.each do |s| %>
         <div>
           <%= link_to routine_path(s) do %>
-            <div class='sport-card card p-5' style="background-image: url('<%= cl_image_path s.background.key if s.background.attached? %>')">
-              <div class='text-center'><%= s.name %></div>
-            </div>
+            <%if s.background.attached?%>
+              <div class='sport-card card p-5' style="background-image: url('<%= cl_image_path s.background.key %>')">
+                <div class='text-center'><%= s.name %></div>
+              </div>
+            <% else %>
+              <div class='sport-card card p-5' style="background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= @photos.sample %>')">
+                <div class='text-center'><%= s.name %></div>
+              </div>
+            <% end %>
           <% end %>
         </div>
       <% end %>
