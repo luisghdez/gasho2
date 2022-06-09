@@ -65,7 +65,11 @@
   flex-direction: column;
   justify-content: space-between;
   background-color: #4b729570;
-  border-radius: 10px;
   height: 187px;
   width: auto;
+  border-radius: 0px 0px 8px 8px;
+}
+
+.text-center.sport{
+  margin-bottom: 50px;
 }
