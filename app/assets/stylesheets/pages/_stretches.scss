@@ -32,6 +32,8 @@ img{
   justify-content: space-between;
   background-color: #4b729570;
   border-radius: 10px;
+  height: 187px;
+  width: 300px;
 }
 
 .card-title{
@@ -39,13 +41,14 @@ img{
   text-transform: lowercase;
   font-size: 36px;
   margin-left: 10px;
+  text-align: center;
 }
 .card-text{
   color: rgb(255, 255, 255);
   text-transform: lowercase;
   font-size: 18px;
   margin-left: 10px;
-  font-family: 'Jost', sans-serif;
+  // font-family: 'Jost', sans-serif;
   font-weight: normal;
 }
 

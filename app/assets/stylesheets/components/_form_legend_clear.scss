@@ -12,3 +12,34 @@ legend ~ div.form-check:first-of-type {
 .form-control {
   border-radius: 8px;
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.select-file{
+  margin-bottom: 10px;
+}
+
+#searchbar{
+  border-radius: 8px;
+  border: none;
+  height: 30px;
+}
+
+.form-control-stretches{
+  border-radius: 8px;
+  border: none;
+  height: 30px;
+  width: 300px;
+  margin-left: auto;
+}
+
+#search-button {
+  margin-left: -35px;
+}

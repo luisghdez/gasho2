@@ -21,11 +21,11 @@
 @import "pages/routinestart";
 @import "components/nofoot";
 
-*{
+* {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  font-family: 'Jonts', sans-serif;
+  text-transform: lowercase !important;
 }
 
 body {
@@ -39,7 +39,8 @@ body {
 }
 
 h1 {
-  color: #FDF6EC;
+  color: rgb(30, 54, 77) !important;
+  font-family: 'Jost', sans-serif !important;
 }
 
 // .container {

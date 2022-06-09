@@ -1,8 +1,8 @@
-<h1>create your new routine</h1>
+<div class="text-center"><h1>create your new routine</h1></div>
 
 <%= simple_form_for @newroutine do |f| %>
   <%= f.input :name %>
   <%= f.input :description %>
-  <%= f.file_field :background, placeholder:"Routine picture URL *", label: false %>
+  <%= f.file_field :background, placeholder:"Routine picture URL *", label: false, class:"select-file"%>
   <%= f.submit 'submit', class: 'btn btn-primary' %>
 <% end %>

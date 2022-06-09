@@ -1,10 +1,13 @@
 <div class='container'>
-  <h1>All Stretches</h1>
+  <h1 style="
+    text-align: center;
+    margin-bottom: 5%;
+">All Stretches</h1>
   <div id="Search">
     <%= form_tag stretches_path, method: :get, id: "searchbar" do %>
       <%= text_field_tag :query,
         params[:query],
-        class: "form-control",
+        class: "form-control-stretches",
         placeholder: "Find a stretch or the difficulty"
       %>
     <% end %>

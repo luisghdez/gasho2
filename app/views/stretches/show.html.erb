@@ -1,7 +1,7 @@
 <div class='routine-container'>
   <div class="routine-img">
     <img src= "<%= @stretch.photo %>" widht="300px" height="300px">
- </div>
+  </div>
   <div class='routine-foot'>
     <div class='card-title'><%= @stretch.name %></div>
     <div class='card-text'><i class="fa-solid fa-person-running"></i>   <%= @stretch.difficulty %></div>
@@ -15,6 +15,7 @@
       <% else  %>
         <%= link_to "Add to your routine", new_routine_path , class: "btn btn-primary"%>
       <% end %>
+    <% end %>
     </div>
   </div>
 </div>

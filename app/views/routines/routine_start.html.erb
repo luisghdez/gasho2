@@ -28,25 +28,25 @@
       <div class="carousel-inner">
         <div class="carousel-item active">
           <div class='card routine-start-head'>
-            <h1>Are you <br><span style='color: #55A4BA'>ready?</span></h1>
+            <h2 class='head-start' style='color: white; font-size: 46px;'>Are you <br><span style='color: #55A4BA'>ready?</span></h2>
           </div>
         </div>
         <% @stretches.each do |stretch| %>
           <div class='carousel-item'>
-            <div class='routine-container-timer'>
-              <div>
+            <div class='routine-container-timer' data-routine-start-duration-value="<%= stretch.duration %>">
+              <div class='d-flex flex-column justify-content-center'>
+                <span><h4 class='text-center'><%= stretch.name %></h4></span>
                 <img src= <%= stretch.photo %> class="stretch-img" alt="...">
-                <span><p><%= stretch.name %></p></span>
               </div>
             </div>
           </div>
         <% end %>
         <div class="carousel-item">
           <div class='card routine-end-head'>
-            <h1>Great job!</h1>
-            <p style='color: #55A4BA; font-size: 28px;'>Rate this routine</p>
+            <h2 style='color: white; font-size: 45px;'>Great job!</h2>
+            <p style='color: #55A4BA; font-size: 28px;'>Rate this routine:</p>
             <br>
-            <p style='color: white; font-size: 28px;'>Difficulty:</p>
+            <p style='color: white; font-size: 24px;'>Difficulty:</p>
             <fieldset class="form-group check_boxes optional snippet_tags">
               <input type="hidden" name="snippet[tag_ids][]" value="">
               <div class="tag-item">
@@ -62,7 +62,7 @@
                 <label class="form-check-label collection_check_boxes" for="snippet_tag_ids_3">Too difficult</label>
               </div>
             </fieldset>
-            <p style='color: white; font-size: 28px;'>Length:</p>
+            <p style='color: white; font-size: 24px;'>Length:</p>
             <fieldset class="form-group check_boxes optional snippet_tags">
               <input type="hidden" name="snippet[tag_ids][]" value="">
               <div class="tag-item">
@@ -78,9 +78,8 @@
                 <label class="form-check-label collection_check_boxes" for="snippet_tag_ids_6">Too long</label>
               </div>
             </fieldset>
-            <br>
+            <div class='d-flex justify-content-around pt-3'>
             <%= link_to 'submit', home_path, style: 'color: #55A4BA' %>
-            <br>
             <%= link_to 'skip', home_path, style: 'color: #55A4BA' %>
           </div>
         </div>

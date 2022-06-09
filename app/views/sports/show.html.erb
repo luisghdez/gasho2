@@ -1,12 +1,12 @@
-
-<div class='container'>
+<div class='routine-container'>
   <h1 class='text-center'><%= @sport.name %></h1>
-  <div class='d-flex flex-column justify-content-around'>
+   <div class="owl-carousel" data-controller="home-carousel">
     <% @routines.each do |r| %>
-      <%= link_to routine_path(r), class: 'card routine-card d-flex flex-row' do %>
-        <div>
-          <h3><%= r.name %></h3>
-          <p><%= r.description %></p>
+      <%= link_to routine_path(r) do %>
+        <div class="routine-img"><img src="https://43nnuk1fz4a72826eo14gwfb-wpengine.netdna-ssl.com/wp-content/uploads/2018/02/0207.10-Min-Stretch-Blog-Inline-Pankcake.jpg" alt=""></div>
+        <div class='routine-foot-sports'>
+          <div class='card-title-sport'><%= r.name %></div>
+          <div class="card-text-sport"><%= r.description %></div>
         </div>
       <% end %>
     <% end %>
