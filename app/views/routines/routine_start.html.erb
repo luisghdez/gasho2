@@ -25,7 +25,7 @@
         <!-- Remaining time label -->
       </span>
     </div>
-    <div id="carouselExampleSlidesOnly" class="vertical carousel slide" data-routine-start-target="carousel">
+    <div id="carouselExampleSlidesOnly" class="vertical carousel slide over-big" data-routine-start-target="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
           <div class='card routine-start-head'>
@@ -33,18 +33,17 @@
           </div>
         </div>
         <% @stretches.each do |stretch| %>
-          <div class='carousel-item over-big'>
+          <div class='carousel-item'>
             <div class='routine-container-timer' data-routine-start-duration-value="<%= stretch.duration %>">
               <div class='container'>
                 <div class='content'>
-                  <div class='over'><span><h4 class='text-center'><%= stretch.name %></h4></span></div>
                   <img src= <%= stretch.photo %> class="stretch-img" alt="...">
                 </div>
               </div>
             </div>
           </div>
         <% end %>
-        <div class="carousel-item">
+        <div class="carousel-item over-end">
           <div class='card routine-end-head'>
             <h2 style='color: white; font-size: 45px;'>Great job!</h2>
             <p style='color: #55A4BA; font-size: 28px;'>Rate this routine:</p>
@@ -54,15 +53,15 @@
               <input type="hidden" name="snippet[tag_ids][]" value="">
               <div class="tag-item">
                 <input class="form-check-input check_boxes optional tag-selector" type="checkbox" value="1" name="snippet[tag_ids][]" id="snippet_tag_ids_1">
-                <label class="form-check-label collection_check_boxes" for="snippet_tag_ids_1">Too easy</label>
+                <label class="form-check-label collection_check_boxes pill-size" for="snippet_tag_ids_1">Too easy</label>
               </div>
               <div class="tag-item">
                 <input class="form-check-input check_boxes optional tag-selector" type="checkbox" value="2" name="snippet[tag_ids][]" id="snippet_tag_ids_2">
-                <label class="form-check-label collection_check_boxes" for="snippet_tag_ids_2">Just right</label>
+                <label class="form-check-label collection_check_boxes pill-size" for="snippet_tag_ids_2">Just right</label>
               </div>
               <div class="tag-item">
                 <input class="form-check-input check_boxes optional tag-selector" type="checkbox" value="3" name="snippet[tag_ids][]" id="snippet_tag_ids_3">
-                <label class="form-check-label collection_check_boxes" for="snippet_tag_ids_3">Too difficult</label>
+                <label class="form-check-label collection_check_boxes pill-size" for="snippet_tag_ids_3">Too difficult</label>
               </div>
             </fieldset>
             <p style='color: white; font-size: 24px;'>Length:</p>
@@ -70,15 +69,15 @@
               <input type="hidden" name="snippet[tag_ids][]" value="">
               <div class="tag-item">
                 <input class="form-check-input check_boxes optional tag-selector" type="checkbox" value="1" name="snippet[tag_ids][]" id="snippet_tag_ids_4">
-                <label class="form-check-label collection_check_boxes" for="snippet_tag_ids_4">Too short</label>
+                <label class="form-check-label collection_check_boxes pill-size" for="snippet_tag_ids_4">Too short</label>
               </div>
               <div class="tag-item">
                 <input class="form-check-input check_boxes optional tag-selector" type="checkbox" value="2" name="snippet[tag_ids][]" id="snippet_tag_ids_5">
-                <label class="form-check-label collection_check_boxes" for="snippet_tag_ids_5">Just right</label>
+                <label class="form-check-label collection_check_boxes pill-size" for="snippet_tag_ids_5">Just right</label>
               </div>
               <div class="tag-item">
                 <input class="form-check-input check_boxes optional tag-selector" type="checkbox" value="3" name="snippet[tag_ids][]" id="snippet_tag_ids_6">
-                <label class="form-check-label collection_check_boxes" for="snippet_tag_ids_6">Too long</label>
+                <label class="form-check-label collection_check_boxes pill-size" for="snippet_tag_ids_6">Too long</label>
               </div>
             </fieldset>
             <div class='d-flex justify-content-around pt-3'>
