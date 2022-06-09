@@ -1,10 +1,10 @@
 <% if @myroutines %>
 <div class='container'>
   <div class='header'>
-    <h1 style='color:#4B7395'>find the perfect routine <span style='color:white'>for you.</span></h1>
+    <h1>find the perfect routine <span style='color:white'>for you.</span></h1>
     <%# <p>*search bar goes here*</p> %>
   </div>
-  <h3 style='color:#4B7395'>special sport routines</h3>
+  <h3 style='color:#4B7395;font-size: medium;'>special sport routines</h3>
   <div class="owl-carousel" data-controller="home-carousel">
     <% @sports.each do |s| %>
       <%= link_to sport_path(s) do %>
@@ -14,7 +14,7 @@
       <% end %>
     <% end %>
   </div>
-  <h3 style='color:#000000'>my routines <%= link_to '+', new_routine_path, class:'btn btn-primary rounded-circle' %></h3>
+  <h3 style='color:#4B7395;font-size: medium;'>my routines <%= link_to '+', new_routine_path, class:'btn btn-primary rounded-circle', style: 'font-size: 12px;' %></h3>
   <% if @myroutines %>
     <div class="owl-carousel" data-controller="home-carousel">
       <% @myroutines.each do |s| %>

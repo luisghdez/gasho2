@@ -8,17 +8,20 @@ export default class extends Controller {
   static targets = ["timer", "color", "carousel", "counter"]
 
   static values = {
-    count: Number
+    count: Number,
+    duration: Number
   }
 
   connect() {
+    console.log(this.durationValue)
     this.carouselCount = 0
     console.log(this.carouselCount)
     this.timerInterval = null;
-    this.time_limit = 3; //implemente stretch duration here
+    this.time_limit = 3;
+    this.stretch_limit = 15; //implemente stretch duration here
     this.timeLeft = this.time_limit
     this.timerTarget.innerHTML = this.formatTimeLeft()
-    this.carousel = new Carousel(this.carouselTarget, { ride: false, wrap: false })
+    this.carousel = new Carousel(this.carouselTarget, { ride: false, wrap: false, pause: 'hover' })
     this.startTimer()
   }
 
@@ -57,11 +60,12 @@ export default class extends Controller {
   }
 
   nextStretch() {
-    this.timeLeft = 3;
-    this.time_limit = 3;
+    this.timeLeft = this.stretch_limit;
+    this.time_limit = this.stretch_limit;
     // this.timeLeft = this.time_limit; leave this line when stretch seconds implemented
     this.carouselCount += 1
     this.carousel.next();
+
     if (this.carouselCount > this.countValue) {
       this.counterTarget.classList.add('d-none')
     }
@@ -69,7 +73,7 @@ export default class extends Controller {
 
   calculateTimeFraction() {
     if (this.timeLeft > 10) {
-      return this.timeLeft / 30
+      return this.timeLeft / this.stretch_limit
     } else {
       return this.timeLeft / this.time_limit; // leave only this line when stretch seconds are implemented
     }
