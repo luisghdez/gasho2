@@ -16,7 +16,7 @@
   </div>
   <h3 style='color:#4B7395;font-size: 20;'>my routines <%= link_to '+', new_routine_path, class:'btn btn-primary rounded-circle', style: 'font-size: 12px;' %></h3>
   <% if @myroutines %>
-    <div class="owl-carousel" data-controller="home-carousel">
+    <div id="myroutines-position" class="owl-carousel" data-controller="home-carousel">
       <% @myroutines.each do |s| %>
         <div>
           <%= link_to routine_path(s) do %>

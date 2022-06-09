@@ -300,6 +300,7 @@ Sport.all.each do |s|
   r.description = warmup
   r.imageable = s
   r.difficulty = difficulty.sample
+  r.image = "https://files.slack.com/files-pri/T02NE0241-F03KBH675T3/image.png"
   r.save
   10.times do
     a = StretchesRoutine.new
@@ -311,6 +312,7 @@ Sport.all.each do |s|
   r.description = post
   r.imageable = s
   r.difficulty = difficulty.sample
+  r.image = "https://cdn.dribbble.com/users/1391772/screenshots/9365912/media/367a54c87853003996ba10a843ee3d4d.jpg?compress=1&resize=1200x900&vertical=top"
   r.save
   10.times do
     a = StretchesRoutine.new
@@ -322,6 +324,7 @@ Sport.all.each do |s|
   r.description = recovery
   r.imageable = s
   r.difficulty = difficulty.sample
+  r.image = "https://cdn.dribbble.com/users/1391772/screenshots/9455785/media/89cb77afe0836144afdb9c75afec8c3a.jpg?compress=1&resize=1200x900&vertical=top"
   r.save
   10.times do
     a = StretchesRoutine.new
