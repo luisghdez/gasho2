@@ -41,3 +41,14 @@
   right: 26px;
   top: 2px;
 }
+
+.delete-button{
+  border-radius: 8px;
+  // --bs-primary: #4B7395;
+  // --bs-primary-rgb: 58,147,187;
+  // background: var(--bs-primary);
+  color: rgb(30, 55, 78);
+  border-width: 0px;
+  padding: 10px;
+  font-size: 20px;
+}

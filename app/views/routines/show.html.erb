@@ -1,12 +1,16 @@
 <div class='container'>
   <div class='routine-head'>
-    <h1><%= @routine.name %></h1>
+    <div class="d-flex justify-content-between">
+      <h1><%= @routine.name %></h1>
+      <% if @routine.imageable_type == "User"%>
+        <%= link_to routine_path(@routine),method: :delete, data: { confirm: "Are you sure?" }, class: "delete-button" do%>
+        <i class="fa-solid fa-trash"></i>
+        <% end %>
+      <% end %>
+    </div>
     <%= @routine.description %>
     <div>
       <%= link_to 'start!', routine_routinestart_path(@routine), class:'btn btn-primary w-100' %>
-      <% if @routine.imageable_type == "User"%>
-        <%= link_to "delete", routine_path(@routine),method: :delete, data: { confirm: "Are you sure?" }, class:'btn btn-primary col-4' %>
-      <% end %>
     </div>
   </div>
  <div class='row'>
