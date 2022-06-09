@@ -1,7 +1,8 @@
 <% content_for :nonav, render('shared/nofoot') %>
 
 <div class="car-container">
-  <div data-controller="routine-start" data-routine-start-count-value="<%= @stretches.count %>">
+  <div class='container'>
+  <div class='content-big' data-controller="routine-start" data-routine-start-count-value="<%= @stretches.count %>">
     <div class="base-timer" data-routine-start-target="counter">
       <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
         <g class="base-timer__circle">
@@ -32,11 +33,13 @@
           </div>
         </div>
         <% @stretches.each do |stretch| %>
-          <div class='carousel-item'>
+          <div class='carousel-item over-big'>
             <div class='routine-container-timer' data-routine-start-duration-value="<%= stretch.duration %>">
-              <div class='d-flex flex-column justify-content-center'>
-                <span><h4 class='text-center'><%= stretch.name %></h4></span>
-                <img src= <%= stretch.photo %> class="stretch-img" alt="...">
+              <div class='container'>
+                <div class='content'>
+                  <div class='over'><span><h4 class='text-center'><%= stretch.name %></h4></span></div>
+                  <img src= <%= stretch.photo %> class="stretch-img" alt="...">
+                </div>
               </div>
             </div>
           </div>
@@ -86,5 +89,6 @@
       </div>
     </div>
     <%# <%= audio_tag("https://cdn.pixabay.com/download/audio/2022/03/09/audio_97e49df2bd.mp3?filename=freezing-night-28066.mp3", autoplay: true, controls: true) %>
+  </div>
   </div>
 </div>

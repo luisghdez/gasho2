@@ -18,7 +18,7 @@ export default class extends Controller {
     console.log(this.carouselCount)
     this.timerInterval = null;
     this.time_limit = 3;
-    this.stretch_limit = 15; //implemente stretch duration here
+    this.stretch_limit = 1000; //implemente stretch duration here
     this.timeLeft = this.time_limit
     this.timerTarget.innerHTML = this.formatTimeLeft()
     this.carousel = new Carousel(this.carouselTarget, { ride: false, wrap: false, pause: 'hover' })
