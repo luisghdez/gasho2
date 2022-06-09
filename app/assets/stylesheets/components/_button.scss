@@ -1,7 +1,7 @@
 .btn-primary {
   border-radius: 8px;
-  --bs-primary: #dab88b;
-  --bs-primary-rgb: 218,184,139;
+  --bs-primary: rgb(58, 147, 187);
+  --bs-primary-rgb: 58,147,187;
   background: var(--bs-primary);
   color: #fdf6ec;
   border-width: 0px;
@@ -10,7 +10,7 @@
 }
 .btn-primary:hover{
   border-radius: 8px;
-  --bs-primary: #4B7396;
+  --bs-primary: rgb(30, 55, 78);
   --bs-primary-rgb: 218,184,139;
   background: var(--bs-primary);
   color: #fdf6ec;
