@@ -7,7 +7,7 @@ class StretchesRoutinesController < ApplicationController
       combo.routine = routine
       combo.stretch = stretch
       combo.save
-      redirect_to routine_path(routine)
+      redirect_to stretches_path
     else
       redirect_to new_routine_path
     end
