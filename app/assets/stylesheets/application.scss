@@ -24,7 +24,6 @@
   margin: 0;
   padding: 0;
   overflow: hidden;
-  font-family: 'Jost', sans-serif;
 }
 
 body {
@@ -39,6 +38,7 @@ body {
 
 h1 {
   color: #FDF6EC;
+  font-family: 'Jost', sans-serif !important;
 }
 
 // .container {
