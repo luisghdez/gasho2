@@ -21,7 +21,7 @@
         <div>
           <%= link_to routine_path(s) do %>
             <%if s.background.attached?%>
-              <div class='sport-card card p-5' style="background-image: url('<%= cl_image_path s.background.key %>')">
+              <div class='sport-card card p-5' style="background-image: url('<%= cl_image_path s.background.key, :cloud_name => cloudname %>')">
                 <div class='text-center'><%= s.name %></div>
               </div>
             <% else %>
