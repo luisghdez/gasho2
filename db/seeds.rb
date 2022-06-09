@@ -281,7 +281,7 @@ stretch.save
 stretch = Stretch.new(name: "Supported shoulder stand", description: "From a supine position, the upper back is resting on the earth with the hips straight up toward the sky. The torso is perpendicular to the earth. The legs are fully extended and the toes are active. The hands are either supporting the lower back or extended up by the side body in matchstick. The weight rests on the center of the back of your skull and the neck maintains its natural curvature. The chest reaches towards the chin and the gaze is inward or towards the toes.", difficulty: "Intermediate", photo:"https://pocketyoga.com/assets/images/thumbnails146/shoulderstand_supported-tn146.png")
 stretch.save
 
-Sport.create(name: 'Football', image: 'https://thumbs.dreamstime.com/b/print-197018800.jpg')
+Sport.create(name: 'Football', image: 'https://cdn.dribbble.com/users/1318871/screenshots/10768051/media/31fe0c5ee1d6dc5a39f5e1a3d64ada45.jpg')
 Sport.create(name: 'Basketball', image: 'https://static.vecteezy.com/system/resources/previews/000/256/158/original/vector-basketball-illustration.jpg')
 Sport.create(name: 'Volleyball', image: 'https://img.freepik.com/free-vector/volleyball-women-illustration_190305-30.jpg?w=2000')
 Sport.create(name: 'Golf', image: 'https://cdn.dribbble.com/users/1754196/screenshots/9680790/media/a34c72dab866709971522d87994683ec.jpg?compress=1&resize=400x300')
