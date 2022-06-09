@@ -17,7 +17,7 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  max-width: 200px;
+  max-width: 300px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -26,11 +26,17 @@ form {
   margin-bottom: 10px;
 }
 
+#searchbar{
+  border-radius: 8px;
+  border: none;
+  height: 30px;
+}
+
 .form-control-stretches{
   border-radius: 8px;
   border: none;
   height: 30px;
-  width: 200px;
+  width: 300px;
   margin-left: auto;
 }
 
