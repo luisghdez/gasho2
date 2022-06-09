@@ -87,7 +87,12 @@
         </div>
       </div>
     </div>
+    <button data-action="click->routine-start#allowsound">
+      <i class="fa-solid fa-headphones"></i>
+    </button>
     <%# <%= audio_tag("https://cdn.pixabay.com/download/audio/2022/03/09/audio_97e49df2bd.mp3?filename=freezing-night-28066.mp3", autoplay: true, controls: true) %>
+    <audio preload="auto" src="<%= asset_path("bell.wav") %>" class="d-none" data-routine-start-target="audio"></audio>
+    <audio src="<%= asset_path("empty.mp3")  %>" data-routine-start-target="emptyAudio"></audio>
   </div>
   </div>
 </div>

@@ -4,29 +4,29 @@
     <h1>find the perfect routine <span style='color:white'>for you.</span></h1>
     <%# <p>*search bar goes here*</p> %>
   </div>
-  <h3 style='color:#4B7395;font-size: medium;'>special sport routines</h3>
+  <h3 style='color:#4B7395;font-size: 20;'>special sport routines</h3>
   <div class="owl-carousel" data-controller="home-carousel">
     <% @sports.each do |s| %>
       <%= link_to sport_path(s) do %>
-        <div style='background-image:  linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= s.image %>)' class='sport-card card p-5'>
-          <div class='text-center'><%= s.name %></div>
+        <div style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path "sports/#{s.name}.jpg" %>)" class='sport-card card p-5'>
+          <div class='card-text-routine'><%= s.name %></div>
         </div>
       <% end %>
     <% end %>
   </div>
-  <h3 style='color:#4B7395;font-size: medium;'>my routines <%= link_to '+', new_routine_path, class:'btn btn-primary rounded-circle', style: 'font-size: 12px;' %></h3>
+  <h3 style='color:#4B7395;font-size: 20;'>my routines <%= link_to '+', new_routine_path, class:'btn btn-primary rounded-circle', style: 'font-size: 12px;' %></h3>
   <% if @myroutines %>
-    <div class="owl-carousel" data-controller="home-carousel">
+    <div id="myroutines-position" class="owl-carousel" data-controller="home-carousel">
       <% @myroutines.each do |s| %>
         <div>
           <%= link_to routine_path(s) do %>
             <%if s.background.attached?%>
-              <div class='sport-card card p-5' style="background-image: url('<%= cl_image_path s.background.key %>')">
-                <div class='text-center'><%= s.name %></div>
+              <div class='sport-card card p-5' style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path s.background.key %>')">
+                <div class='card-text-routine'><%= s.name %></div>
               </div>
             <% else %>
-              <div class='sport-card card p-5' style="background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= @photos.sample %>')">
-                <div class='text-center'><%= s.name %></div>
+              <div class='myroutines card p-5' style="background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= @photos.sample %>')">
+                <div class='card-text-routine'><%= s.name %></div>
               </div>
             <% end %>
           <% end %>

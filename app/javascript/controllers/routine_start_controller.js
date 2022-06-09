@@ -1,11 +1,9 @@
-
-
 import { Controller } from "@hotwired/stimulus"
 import { Carousel } from "bootstrap"
 import { green } from "@mui/material/colors";
 
 export default class extends Controller {
-  static targets = ["timer", "color", "carousel", "counter"]
+  static targets = ["timer", "color", "carousel", "counter", "audio", "emptyAudio"]
 
   static values = {
     count: Number,
@@ -21,7 +19,8 @@ export default class extends Controller {
     this.stretch_limit = 3; //implemente stretch duration here
     this.timeLeft = this.time_limit
     this.timerTarget.innerHTML = this.formatTimeLeft()
-    this.carousel = new Carousel(this.carouselTarget, { ride: false, wrap: false, pause: 'hover' })
+    this.carousel = new Carousel(this.carouselTarget, { ride: false, wrap: false })
+    this.playAudio = false
     this.startTimer()
   }
 
@@ -51,6 +50,15 @@ export default class extends Controller {
 
       if (this.timeLeft === -1) {
         this.nextStretch();
+      } else if (this.timeLeft === 0) {
+        if (this.playAudio) {
+          setTimeout(() => {
+            console.log("playing")
+            this.audioTarget.pause();
+            this.audioTarget.currentTime = 0;
+            this.audioTarget.play();
+          }, 500);
+      }
       }
 
       this.timerTarget.innerHTML = this.formatTimeLeft(this.timeLeft);
@@ -60,6 +68,7 @@ export default class extends Controller {
   }
 
   nextStretch() {
+
     this.timeLeft = this.stretch_limit;
     this.time_limit = this.stretch_limit;
     // this.timeLeft = this.time_limit; leave this line when stretch seconds implemented
@@ -85,4 +94,10 @@ export default class extends Controller {
     ).toFixed(0)} 283`;
     this.colorTarget.setAttribute("stroke-dasharray", circleDasharray);
   }
+
+  allowsound() {
+    this.emptyAudioTarget.play(); // play empty sound so automatic play is allowed
+    this.playAudio = true;
+  }
+
 }

@@ -281,7 +281,7 @@ stretch.save
 stretch = Stretch.new(name: "Supported shoulder stand", description: "From a supine position, the upper back is resting on the earth with the hips straight up toward the sky. The torso is perpendicular to the earth. The legs are fully extended and the toes are active. The hands are either supporting the lower back or extended up by the side body in matchstick. The weight rests on the center of the back of your skull and the neck maintains its natural curvature. The chest reaches towards the chin and the gaze is inward or towards the toes.", difficulty: "Intermediate", photo:"https://pocketyoga.com/assets/images/thumbnails146/shoulderstand_supported-tn146.png")
 stretch.save
 
-Sport.create(name: 'Football', image: 'https://thumbs.dreamstime.com/b/print-197018800.jpg')
+Sport.create(name: 'Football', image: 'https://cdn.dribbble.com/users/1318871/screenshots/10768051/media/31fe0c5ee1d6dc5a39f5e1a3d64ada45.jpg')
 Sport.create(name: 'Basketball', image: 'https://static.vecteezy.com/system/resources/previews/000/256/158/original/vector-basketball-illustration.jpg')
 Sport.create(name: 'Volleyball', image: 'https://img.freepik.com/free-vector/volleyball-women-illustration_190305-30.jpg?w=2000')
 Sport.create(name: 'Golf', image: 'https://cdn.dribbble.com/users/1754196/screenshots/9680790/media/a34c72dab866709971522d87994683ec.jpg?compress=1&resize=400x300')
@@ -300,6 +300,7 @@ Sport.all.each do |s|
   r.description = warmup
   r.imageable = s
   r.difficulty = difficulty.sample
+  r.image = "https://files.slack.com/files-pri/T02NE0241-F03KBH675T3/image.png"
   r.save
   10.times do
     a = StretchesRoutine.new
@@ -311,6 +312,7 @@ Sport.all.each do |s|
   r.description = post
   r.imageable = s
   r.difficulty = difficulty.sample
+  r.image = "https://cdn.dribbble.com/users/1391772/screenshots/9365912/media/367a54c87853003996ba10a843ee3d4d.jpg?compress=1&resize=1200x900&vertical=top"
   r.save
   10.times do
     a = StretchesRoutine.new
@@ -322,6 +324,7 @@ Sport.all.each do |s|
   r.description = recovery
   r.imageable = s
   r.difficulty = difficulty.sample
+  r.image = "https://cdn.dribbble.com/users/1391772/screenshots/9455785/media/89cb77afe0836144afdb9c75afec8c3a.jpg?compress=1&resize=1200x900&vertical=top"
   r.save
   10.times do
     a = StretchesRoutine.new
