@@ -300,7 +300,7 @@ Sport.all.each do |s|
   r.description = warmup
   r.imageable = s
   r.difficulty = difficulty.sample
-  r.image = "https://files.slack.com/files-pri/T02NE0241-F03KBH675T3/image.png"
+  r.image = "https://cdn.dribbble.com/users/1137398/screenshots/14351899/media/c371bff98c24223ed7dc4ab48558b2f9.jpg?compress=1&resize=1200x900&vertical=top"
   r.save
   10.times do
     a = StretchesRoutine.new
