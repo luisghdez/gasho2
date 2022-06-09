@@ -12,3 +12,16 @@ legend ~ div.form-check:first-of-type {
 .form-control {
   border-radius: 8px;
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.select-file{
+  margin-bottom: 10px;
+}
